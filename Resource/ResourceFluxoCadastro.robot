@@ -1,7 +1,8 @@
 *** Settings ***
 
 Library		          SeleniumLibrary
-
+Library             FakerLibrary
+# Library             Requests
 
 *** Variables ***
 ### ABERTURA DE NAVEGADOR ###
@@ -30,16 +31,22 @@ Dado que estou na pagina home
 E clicar no botão Cadastre-se
   Click Element    xPath=//*[@id="cadastro_lp"]
 
-E preencher "${NOME}" no campo nome
-  Input Text         name=name   ${NOME}
+E preencher "${NOME_FAKER}" no campo nome
+  Wait Until Element Is Visible       name=name
+  # ${NOME_FAKER}                       FakerLibrary.Name
+  Input Text                          name=name   ${NOME_FAKER}
   # Should Be Equal    ${NOME}      Qualidade Qualidade
 
-E preencher "${EMAIL}" no campo e-mail
-  Input Text        name=email    ${EMAIL}
+E preencher "${EMAIL_FAKER}" no campo e-mail
+  Wait Until Element Is Visible    name=email
+  ${EMAIL_FAKER}                   FakerLibrary.Email
+  Input Text                       name=email    ${EMAIL_FAKER}
   # Should Be Equal   ${EMAIL}      eder16.estevan@floraenergia.com.br
 
-E preencher "${CELULAR}" no campo celular
-  Input Text        name=phone_number   ${CELULAR}
+E preencher "${CELULAR_FAKER}" no campo celular
+  Wait Until Element Is Visible       name=phone_number
+  # ${CELULAR_FAKER}                      FakerLibrary. Mobile
+  Input Text                          name=phone_number   ${CELULAR_FAKER}
   # Should Be Equal   ${CELULAR}
 
 E preencher "${UF}" no campo uf
@@ -47,9 +54,10 @@ E preencher "${UF}" no campo uf
   Input Text        css:input[role=combobox]    ${UF}
   # Page Should Contain        ${UF}  SP
 
-E preencher "${$CIDADE}" no campo cidade
-  Click Element       xPath=//*[@id="root"]/div[1]/div/div[4]/div[1]/div[2]/div[5]/div[2]/input
-  Input Text          xPath=//*[@id="root"]/div[1]/div/div[4]/div[1]/div[2]/div[5]/div[2]/input   ${$CIDADE}
+E preencher "${CIDADE_FAKER}" no campo cidade
+  Click Element                         xPath=//*[@id="root"]/div[1]/div/div[4]/div[1]/div[2]/div[5]/div[2]/input
+  # ${CIDADE_FAKER}                      FakerLibrary.City
+  Input Text                            xPath=//*[@id="root"]/div[1]/div/div[4]/div[1]/div[2]/div[5]/div[2]/input   ${CIDADE_FAKER}
   # Should Be Equal     ${$CIDADE}    Campinas
 
 E preencher "${VALOR_LUZ}" no campo Conta de luz
@@ -308,3 +316,12 @@ E preencher Checkbox de privacidade
 
 
 PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CHECKBOX DE POLITICA DE PRIVACIDADE | CASO 01: Checkbox não preenchido não permitir avançar para proposta
+
+
+
+
+## FLUXO DE CADASTRO PAGE 3 -ASSINATURA ###
+# Page_3 - Fluxo de cadastro | Caso de teste 01: Assinatura simples
+#
+# E seguir com o fluxo de cadastro e validar tela de "Proposta"
+#   Então seguir com o fluxo de cadastro e validar tela de "Proposta"

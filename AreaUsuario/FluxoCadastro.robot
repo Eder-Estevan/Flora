@@ -17,7 +17,7 @@ Page_1 - Fluxo de cadastro | Caso de teste 01: Cadastro simples "caminho feliz"
   E preencher "eder40.estevan@floraenergia.com.br" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -36,7 +36,7 @@ PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 02: No campo "Nome" NÃ
   E preencher "eder40.estevan@floraenergia.com.br" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -45,7 +45,7 @@ PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 02: No campo "Nome" NÃ
 
 #
 
-PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 03: No campo "Nome" NÃO deve permitir gravar números
+PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 03: No campo "Nome" NÃO deve permitir gravar números junto com o nome e sobrenome
   [Tags]  Page1_nome_caso3
 
   Dado que estou na pagina home
@@ -54,7 +54,7 @@ PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 03: No campo "Nome" NÃ
   E preencher "eder40.estevan@floraenergia.com.br" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -72,7 +72,7 @@ PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 04: No campo "Nome" ao 
   E preencher "eder40.estevan@floraenergia.com.br" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -86,11 +86,11 @@ PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 05: No campo "Nome" NÃ
 
   Dado que estou na pagina home
   E clicar no botão Cadastre-se
-  E preencher "!@#$%¨&* !@#$% " no campo nome
+  E preencher "!@#$%¨&*@#$%¹²³£¢¬§°ªº₢´¨" no campo nome
   E preencher "eder40.estevan@floraenergia.com.br" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -104,11 +104,11 @@ PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 06: No Campo "Nome" NÃ
 
   Dado que estou na pagina home
   E clicar no botão Cadastre-se
-  E preencher "Qualidade !@#$%" no campo nome
+  E preencher "Qualidade !@#$%¨&*@#$%¹²³£¢¬§°ªº₢´¨" no campo nome
   E preencher "eder40.estevan@floraenergia.com.br" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -126,11 +126,26 @@ PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 07: No Campo "Nome" per
   E preencher "eder40.estevan@floraenergia.com.br" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
   Então permitir avançar para o fluxo de proposta validando tela de "Proposta"
+
+PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 08: No Campo "Nome" Não permitir inserir apenas números
+    [Tags]  Page1_nome_caso8
+
+    Dado que estou na pagina home
+    E clicar no botão Cadastre-se
+    E preencher "1234566" no campo nome
+    E preencher "eder40.estevan@floraenergia.com.br" no campo e-mail
+    E preencher "11111111111" no campo celular
+    E preencher "SP" no campo uf
+    E preencher "São Carlos" no campo cidade
+    E preencher "1000" no campo Conta de luz
+    # E preencher " " no campo Cód Promocional
+    Quando eu clicar no botão "Avançar" no fluxo de cadastro
+    Então permitir avançar para o fluxo de proposta validando tela de "Proposta"
 
 #
 
@@ -144,7 +159,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO EMAIL | CASO 01: No campo "Email" n
   E preencher "FLORA@ENERGIA.COM.BR" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -162,7 +177,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO EMAIL | CASO 02: No campo "Email" n
   E preencher "flora floraa@energia.com.br" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -180,7 +195,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO EMAIL | CASO 03: No campo "Email" n
   E preencher " " no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -198,7 +213,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO EMAIL | CASO 04: No campo "Email" n
   E preencher "né@né.com.br" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -216,7 +231,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO EMAIL | CASO 05: No campo "Email" n
   E preencher "açougue@açougue.com.br" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -235,7 +250,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CELULAR | CASO 01: No campo "Celula
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher "Teste celular" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -253,7 +268,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CELULAR | CASO 02: No campo "Celula
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher "123456789012345" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -270,7 +285,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CELULAR | CASO 03: No campo "Celula
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher "12345" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -288,7 +303,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CELULAR | CASO 04: No campo "Celula
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher " " no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -409,7 +424,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CONTA DE LUZ MENSAL | CASO 01: No c
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher "12345678901" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "@@@@" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -427,7 +442,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CONTA DE LUZ MENSAL | CASO 02: No c
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher "12345678901" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher " " no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -445,7 +460,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CONTA DE LUZ MENSAL | CASO 03: No c
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher "12345678901" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "FLORA" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -463,7 +478,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CONTA DE LUZ MENSAL | CASO 04: No c
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher "12345678901" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "0" no campo Conta de luz
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -482,7 +497,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CÓD PROMOCIONAL | CASO 01: No camp
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher "12345678901" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   E preencher "!@#$%¨&*()1234567890ASDFGHJKLºªº?°₢" no campo Cód Promocional "promocode"
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -500,7 +515,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CÓD PROMOCIONAL | CASO 02: No camp
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher "12345678901" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   E preencher "BAND" no campo Cód Promocional "promocode"
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -517,7 +532,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CÓD PROMOCIONAL | CASO 03: No camp
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher "12345678901" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   E preencher "GLOBO" no campo Cód Promocional "promocode"
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -535,7 +550,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CÓD PROMOCIONAL | CASO 04: No camp
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher "12345678901" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   E preencher " " no campo Cód Promocional "promocode"
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -553,7 +568,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CÓD PROMOCIONAL | CASO 05: No camp
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher "12345678901" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional "promocode"
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
@@ -572,7 +587,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CHECKBOX DE POLITICA DE PRIVACIDADE | CAS
   E preencher "flora@energia.com.br" no campo e-mail
   E preencher "12345678901" no campo celular
   E preencher "SP" no campo uf
-  E preencher "Campinas" no campo cidade
+  E preencher "São Carlos" no campo cidade
   E preencher "1000" no campo Conta de luz
   # E preencher " " no campo Cód Promocional "promocode"
   E preencher Checkbox de privacidade
@@ -627,8 +642,9 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CHECKBOX DE POLITICA DE PRIVACIDADE | CAS
 #   Então seguir com o fluxo de cadastro e validar tela de "assinatura"
 #
 #
-#   ## FLUXO DE CADASTRO PAGE 3 -ASSINATURA ###
+  ## FLUXO DE CADASTRO PAGE 3 -ASSINATURA ###
 # Page_3 - Fluxo de cadastro | Caso de teste 01: Assinatura simples
+#   [Tags]  Page1_assinatura_caso1
 #
 #   Dado que estou na pagina home
 #   E clicar no botão Cadastre-se
@@ -636,22 +652,22 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CHECKBOX DE POLITICA DE PRIVACIDADE | CAS
 #   E preencher "eder55.estevan@floraenergia.com.br" no campo e-mail
 #   E preencher "11111111111" no campo celular
 #   E preencher "SP" no campo uf
-#   E preencher "Campinas" no campo cidade
+#   E preencher "São Carlos" no campo cidade
 #   E preencher "1000" no campo Conta de luz
 #   # E preencher " " no campo Cód Promocional
 #   E clicar no botão "Avançar" no fluxo de cadastro
 #   E seguir com o fluxo de cadastro e validar tela de "Proposta"
 #   E clicar no botão "Avançar" proposta
 #   E seguir com o fluxo de cadastro e validar tela de "assinatura"
-#   E preencher "13088-364" no campo Cep
-#   E validar endereço "Rua Manoella Candida de Paula"
+#   E preencher "13560-290" no campo Cep
+#   # E validar endereço "Rua Manoella Candida de Paula"
 #   E preencher "100" no campo número
 #   E preencher "Barraco 2" no campo complemento
-#   E validar o bairro "Núcleo Residencial Getúlio Vargas"
-#   E validar o nome da cidade "Campinas"
-#   E validar o nome do estado "São Paulo"
+#   # E validar o bairro "Núcleo Residencial Getúlio Vargas"
+#   # E validar o nome da cidade "Campinas"
+#   # E validar o nome do estado "São Paulo"
 #   E preencher "Qa Qualidade" no campo nome do titular
-#   E preencher "eder55.estevan@floraenergia.com.br" no campo e-mail do titular
+#   E preencher "eder.estevan@floraenergia.com.br" no campo e-mail do titular
 #   E preencher "23.792.917/0002-52" no campo CPF/CNPJ
 #   Quando eu clicar no botão "Enviar contrato"
 #   Então seguir com o fluxo de cadastro e validar tela de "Envio de contrato"
