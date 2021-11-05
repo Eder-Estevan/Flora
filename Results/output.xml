@@ -1,197 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20211101 20:20:27.695" rpa="false" schemaversion="2">
-<suite id="s1" name="Areausuario" source="C:\Projetos\RobotFlora\areausuario">
-<suite id="s1-s1" name="FluxoCadastro" source="C:\Projetos\RobotFlora\areausuario\FluxoCadastro.robot">
-<test id="s1-s1-t1" name="PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 05: No campo &quot;Nome&quot; NÃO deve permitir caracteres especiais">
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20211104 18:56:33.961" rpa="false" schemaversion="2">
+<suite id="s1" name="AreaUsuario" source="C:\Projetos\RobotFlora\AreaUsuario">
+<suite id="s1-s1" name="FluxoCadastro" source="C:\Projetos\RobotFlora\AreaUsuario\FluxoCadastro.robot">
+<test id="s1-s1-t1" name="PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 02: No campo &quot;Nome&quot; NÃO permitir gravar apenas com o primeiro Nome">
 <kw name="Abrir navegador" library="ResourceFluxoCadastro" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20211101 20:20:28.814" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
-<status status="PASS" starttime="20211101 20:20:28.814" endtime="20211101 20:20:44.286"/>
+<msg timestamp="20211104 18:56:34.380" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
+<status status="PASS" starttime="20211104 18:56:34.380" endtime="20211104 18:56:55.386"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20211101 20:20:44.286" endtime="20211101 20:20:44.426"/>
+<status status="PASS" starttime="20211104 18:56:55.386" endtime="20211104 18:56:55.507"/>
 </kw>
-<status status="PASS" starttime="20211101 20:20:28.814" endtime="20211101 20:20:44.426"/>
+<status status="PASS" starttime="20211104 18:56:34.379" endtime="20211104 18:56:55.507"/>
 </kw>
 <kw name="Dado que estou na pagina home" library="ResourceFluxoCadastro">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20211101 20:20:44.429" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
-<status status="PASS" starttime="20211101 20:20:44.428" endtime="20211101 20:20:47.623"/>
+<msg timestamp="20211104 18:56:55.509" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
+<status status="PASS" starttime="20211104 18:56:55.509" endtime="20211104 18:57:00.739"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${VALIDAR_PAGINA}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20211101 20:20:47.635" level="INFO">Page title is 'Flora Energia'.</msg>
-<status status="PASS" starttime="20211101 20:20:47.624" endtime="20211101 20:20:47.635"/>
+<msg timestamp="20211104 18:57:00.743" level="INFO">Page title is 'Flora Energia'.</msg>
+<status status="PASS" starttime="20211104 18:57:00.739" endtime="20211104 18:57:00.743"/>
 </kw>
-<status status="PASS" starttime="20211101 20:20:44.428" endtime="20211101 20:20:47.636"/>
+<status status="PASS" starttime="20211104 18:56:55.508" endtime="20211104 18:57:00.743"/>
 </kw>
 <kw name="E clicar no botão Cadastre-se" library="ResourceFluxoCadastro">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xPath=//*[@id="cadastro_lp"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211101 20:20:47.642" level="INFO">Clicking element 'xPath=//*[@id="cadastro_lp"]'.</msg>
-<status status="PASS" starttime="20211101 20:20:47.641" endtime="20211101 20:20:49.395"/>
+<msg timestamp="20211104 18:57:00.745" level="INFO">Clicking element 'xPath=//*[@id="cadastro_lp"]'.</msg>
+<status status="PASS" starttime="20211104 18:57:00.745" endtime="20211104 18:57:02.504"/>
 </kw>
-<status status="PASS" starttime="20211101 20:20:47.639" endtime="20211101 20:20:49.396"/>
+<status status="PASS" starttime="20211104 18:57:00.744" endtime="20211104 18:57:02.504"/>
 </kw>
-<kw name="E preencher &quot;!@#$%¨&amp;*@#$%¹²³£¢¬§°ªº₢´¨&quot; no campo nome" library="ResourceFluxoCadastro" sourcename="E preencher &quot;${NOME_FAKER}&quot; no campo nome">
+<kw name="E preencher &quot;Qualidade&quot; no campo nome" library="ResourceFluxoCadastro" sourcename="E preencher &quot;${NOME_FAKER}&quot; no campo nome">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>name=name</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211101 20:20:49.400" endtime="20211101 20:20:49.449"/>
+<status status="PASS" starttime="20211104 18:57:02.505" endtime="20211104 18:57:02.547"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=name</arg>
 <arg>${NOME_FAKER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211101 20:20:49.449" level="INFO">Typing text '!@#$%¨&amp;*@#$%¹²³£¢¬§°ªº₢´¨' into text field 'name=name'.</msg>
-<status status="PASS" starttime="20211101 20:20:49.449" endtime="20211101 20:20:49.786"/>
+<msg timestamp="20211104 18:57:02.548" level="INFO">Typing text 'Qualidade' into text field 'name=name'.</msg>
+<status status="PASS" starttime="20211104 18:57:02.547" endtime="20211104 18:57:02.653"/>
 </kw>
-<status status="PASS" starttime="20211101 20:20:49.398" endtime="20211101 20:20:49.786"/>
+<status status="PASS" starttime="20211104 18:57:02.505" endtime="20211104 18:57:02.653"/>
 </kw>
-<kw name="E preencher &quot;eder40.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceFluxoCadastro" sourcename="E preencher &quot;${EMAIL_FAKER}&quot; no campo e-mail">
+<kw name="E preencher &quot;roxaj29438@cyadp.com&quot; no campo e-mail" library="ResourceFluxoCadastro" sourcename="E preencher &quot;${EMAIL_FAKER}&quot; no campo e-mail">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>name=email</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211101 20:20:49.789" endtime="20211101 20:20:49.820"/>
-</kw>
-<kw name="Email" library="FakerLibrary">
-<var>${EMAIL_FAKER}</var>
-<msg timestamp="20211101 20:20:49.820" level="INFO">${EMAIL_FAKER} = alexanderterry@example.net</msg>
-<status status="PASS" starttime="20211101 20:20:49.820" endtime="20211101 20:20:49.820"/>
+<status status="PASS" starttime="20211104 18:57:02.654" endtime="20211104 18:57:02.681"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=email</arg>
 <arg>${EMAIL_FAKER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211101 20:20:49.821" level="INFO">Typing text 'alexanderterry@example.net' into text field 'name=email'.</msg>
-<status status="PASS" starttime="20211101 20:20:49.820" endtime="20211101 20:20:50.042"/>
+<msg timestamp="20211104 18:57:02.682" level="INFO">Typing text 'roxaj29438@cyadp.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20211104 18:57:02.681" endtime="20211104 18:57:02.824"/>
 </kw>
-<status status="PASS" starttime="20211101 20:20:49.788" endtime="20211101 20:20:50.042"/>
+<status status="PASS" starttime="20211104 18:57:02.654" endtime="20211104 18:57:02.824"/>
 </kw>
 <kw name="E preencher &quot;11111111111&quot; no campo celular" library="ResourceFluxoCadastro" sourcename="E preencher &quot;${CELULAR_FAKER}&quot; no campo celular">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>name=phone_number</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211101 20:20:50.044" endtime="20211101 20:20:50.085"/>
+<status status="PASS" starttime="20211104 18:57:02.825" endtime="20211104 18:57:02.845"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=phone_number</arg>
 <arg>${CELULAR_FAKER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211101 20:20:50.086" level="INFO">Typing text '11111111111' into text field 'name=phone_number'.</msg>
-<status status="PASS" starttime="20211101 20:20:50.085" endtime="20211101 20:20:50.265"/>
+<msg timestamp="20211104 18:57:02.845" level="INFO">Typing text '11111111111' into text field 'name=phone_number'.</msg>
+<status status="PASS" starttime="20211104 18:57:02.845" endtime="20211104 18:57:02.945"/>
 </kw>
-<status status="PASS" starttime="20211101 20:20:50.043" endtime="20211101 20:20:50.265"/>
+<status status="PASS" starttime="20211104 18:57:02.825" endtime="20211104 18:57:02.946"/>
 </kw>
 <kw name="E preencher &quot;SP&quot; no campo uf" library="ResourceFluxoCadastro" sourcename="E preencher &quot;${UF}&quot; no campo uf">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:input[role=combobox]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211101 20:20:50.266" level="INFO">Clicking element 'css:input[role=combobox]'.</msg>
-<status status="PASS" starttime="20211101 20:20:50.266" endtime="20211101 20:20:50.359"/>
+<msg timestamp="20211104 18:57:02.947" level="INFO">Clicking element 'css:input[role=combobox]'.</msg>
+<status status="PASS" starttime="20211104 18:57:02.947" endtime="20211104 18:57:03.013"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>css:input[role=combobox]</arg>
 <arg>${UF}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211101 20:20:50.360" level="INFO">Typing text 'SP' into text field 'css:input[role=combobox]'.</msg>
-<status status="PASS" starttime="20211101 20:20:50.359" endtime="20211101 20:20:50.460"/>
+<msg timestamp="20211104 18:57:03.013" level="INFO">Typing text 'SP' into text field 'css:input[role=combobox]'.</msg>
+<status status="PASS" starttime="20211104 18:57:03.013" endtime="20211104 18:57:03.097"/>
 </kw>
-<status status="PASS" starttime="20211101 20:20:50.266" endtime="20211101 20:20:50.461"/>
+<status status="PASS" starttime="20211104 18:57:02.946" endtime="20211104 18:57:03.097"/>
 </kw>
 <kw name="E preencher &quot;São Carlos&quot; no campo cidade" library="ResourceFluxoCadastro" sourcename="E preencher &quot;${CIDADE_FAKER}&quot; no campo cidade">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xPath=//*[@id="root"]/div[1]/div/div[4]/div[1]/div[2]/div[5]/div[2]/input</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211101 20:20:50.466" level="INFO">Clicking element 'xPath=//*[@id="root"]/div[1]/div/div[4]/div[1]/div[2]/div[5]/div[2]/input'.</msg>
-<status status="PASS" starttime="20211101 20:20:50.465" endtime="20211101 20:20:50.549"/>
+<msg timestamp="20211104 18:57:03.098" level="INFO">Clicking element 'xPath=//*[@id="root"]/div[1]/div/div[4]/div[1]/div[2]/div[5]/div[2]/input'.</msg>
+<status status="PASS" starttime="20211104 18:57:03.098" endtime="20211104 18:57:03.156"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xPath=//*[@id="root"]/div[1]/div/div[4]/div[1]/div[2]/div[5]/div[2]/input</arg>
 <arg>${CIDADE_FAKER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211101 20:20:50.550" level="INFO">Typing text 'São Carlos' into text field 'xPath=//*[@id="root"]/div[1]/div/div[4]/div[1]/div[2]/div[5]/div[2]/input'.</msg>
-<status status="PASS" starttime="20211101 20:20:50.549" endtime="20211101 20:20:50.747"/>
+<msg timestamp="20211104 18:57:03.157" level="INFO">Typing text 'São Carlos' into text field 'xPath=//*[@id="root"]/div[1]/div/div[4]/div[1]/div[2]/div[5]/div[2]/input'.</msg>
+<status status="PASS" starttime="20211104 18:57:03.156" endtime="20211104 18:57:03.305"/>
 </kw>
-<status status="PASS" starttime="20211101 20:20:50.464" endtime="20211101 20:20:50.747"/>
+<status status="PASS" starttime="20211104 18:57:03.097" endtime="20211104 18:57:03.305"/>
 </kw>
 <kw name="E preencher &quot;1000&quot; no campo Conta de luz" library="ResourceFluxoCadastro" sourcename="E preencher &quot;${VALOR_LUZ}&quot; no campo Conta de luz">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=estimated_electric_bill</arg>
 <arg>${VALOR_LUZ}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211101 20:20:50.749" level="INFO">Typing text '1000' into text field 'name=estimated_electric_bill'.</msg>
-<status status="PASS" starttime="20211101 20:20:50.748" endtime="20211101 20:20:50.882"/>
+<msg timestamp="20211104 18:57:03.307" level="INFO">Typing text '1000' into text field 'name=estimated_electric_bill'.</msg>
+<status status="PASS" starttime="20211104 18:57:03.306" endtime="20211104 18:57:03.454"/>
 </kw>
-<status status="PASS" starttime="20211101 20:20:50.748" endtime="20211101 20:20:50.883"/>
+<status status="PASS" starttime="20211104 18:57:03.306" endtime="20211104 18:57:03.454"/>
 </kw>
 <kw name="Quando eu clicar no botão &quot;Avançar&quot; no fluxo de cadastro" library="ResourceFluxoCadastro">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:button.mt-2.btn-register.btn.btn-primary</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211101 20:20:50.886" level="INFO">Clicking element 'css:button.mt-2.btn-register.btn.btn-primary'.</msg>
-<status status="PASS" starttime="20211101 20:20:50.886" endtime="20211101 20:20:50.983"/>
+<msg timestamp="20211104 18:57:03.455" level="INFO">Clicking element 'css:button.mt-2.btn-register.btn.btn-primary'.</msg>
+<status status="PASS" starttime="20211104 18:57:03.455" endtime="20211104 18:57:03.519"/>
 </kw>
-<status status="PASS" starttime="20211101 20:20:50.885" endtime="20211101 20:20:50.983"/>
+<status status="PASS" starttime="20211104 18:57:03.455" endtime="20211104 18:57:03.519"/>
 </kw>
 <kw name="Então não permitir avançar para proposta" library="ResourceFluxoCadastro">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>Xpath=//*[@id="root"]/div[1]/div</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211101 20:20:50.984" endtime="20211101 20:20:51.099"/>
+<status status="PASS" starttime="20211104 18:57:03.521" endtime="20211104 18:57:03.547"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>Xpath=//*[@id="root"]/div[1]/div/div[4]/div[1]/div[1]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20211101 20:20:51.114" level="INFO">Current page contains element 'Xpath=//*[@id="root"]/div[1]/div/div[4]/div[1]/div[1]'.</msg>
-<status status="PASS" starttime="20211101 20:20:51.101" endtime="20211101 20:20:51.114"/>
+<msg timestamp="20211104 18:57:03.565" level="INFO">Current page contains element 'Xpath=//*[@id="root"]/div[1]/div/div[4]/div[1]/div[1]'.</msg>
+<status status="PASS" starttime="20211104 18:57:03.547" endtime="20211104 18:57:03.565"/>
 </kw>
-<status status="PASS" starttime="20211101 20:20:50.984" endtime="20211101 20:20:51.114"/>
+<status status="PASS" starttime="20211104 18:57:03.520" endtime="20211104 18:57:03.565"/>
 </kw>
-<kw name="E apresentar retorno ao usuário nome inválido &quot;Insira um nome válido.&quot;" library="ResourceFluxoCadastro" sourcename="E apresentar retorno ao usuário nome inválido &quot;${TOAST_NOME_VALIDO}&quot;">
+<kw name="E apresentar retorno ao usuário nome completo &quot;Insira seu nome completo.&quot;" library="ResourceFluxoCadastro" sourcename="E apresentar retorno ao usuário nome completo &quot;${TOAST_NOME_COMPLETO}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>Xpath=//*[@id="root"]/div[2]/div</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211101 20:20:51.116" endtime="20211101 20:20:51.143"/>
+<status status="PASS" starttime="20211104 18:57:03.569" endtime="20211104 18:57:03.632"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
-<arg>${TOAST_NOME_VALIDO}</arg>
-<arg>Insira um nome válido.</arg>
+<arg>${TOAST_NOME_COMPLETO}</arg>
+<arg>Insira seu nome completo.</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20211101 20:20:51.144" endtime="20211101 20:20:51.145"/>
+<status status="PASS" starttime="20211104 18:57:03.633" endtime="20211104 18:57:03.635"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20211101 20:20:51.525" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-100.png"&gt;&lt;img src="selenium-screenshot-100.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20211101 20:20:51.146" endtime="20211101 20:20:51.525"/>
+<msg timestamp="20211104 18:57:03.853" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211104 18:57:03.635" endtime="20211104 18:57:03.853"/>
 </kw>
-<status status="PASS" starttime="20211101 20:20:51.115" endtime="20211101 20:20:51.525"/>
+<status status="PASS" starttime="20211104 18:57:03.568" endtime="20211104 18:57:03.853"/>
 </kw>
-<tag>Page1_nome_caso5</tag>
-<status status="PASS" starttime="20211101 20:20:28.813" endtime="20211101 20:20:51.527"/>
+<tag>Page1_nome_caso2</tag>
+<status status="PASS" starttime="20211104 18:56:34.379" endtime="20211104 18:57:03.854"/>
 </test>
-<status status="PASS" starttime="20211101 20:20:27.723" endtime="20211101 20:20:51.528"/>
+<status status="PASS" starttime="20211104 18:56:33.977" endtime="20211104 18:57:03.856"/>
 </suite>
-<status status="PASS" starttime="20211101 20:20:27.696" endtime="20211101 20:20:51.532"/>
+<status status="PASS" starttime="20211104 18:56:33.962" endtime="20211104 18:57:03.859"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Page1_nome_caso5</stat>
+<stat pass="1" fail="0" skip="0">Page1_nome_caso2</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Areausuario">Areausuario</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="FluxoCadastro">Areausuario.FluxoCadastro</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="AreaUsuario">AreaUsuario</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="FluxoCadastro">AreaUsuario.FluxoCadastro</stat>
 </suite>
 </statistics>
 <errors>

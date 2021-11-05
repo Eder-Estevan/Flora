@@ -39,7 +39,7 @@ E preencher "${NOME_FAKER}" no campo nome
 
 E preencher "${EMAIL_FAKER}" no campo e-mail
   Wait Until Element Is Visible    name=email
-  ${EMAIL_FAKER}                   FakerLibrary.Email
+  # ${EMAIL_FAKER}                   FakerLibrary.Email
   Input Text                       name=email    ${EMAIL_FAKER}
   # Should Be Equal   ${EMAIL}      eder16.estevan@floraenergia.com.br
 
@@ -311,13 +311,14 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CÓD PROMOCIONAL | CASO 05: No camp
 PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CHECKBOX DE POLITICA DE PRIVACIDADE | CASO 01: Checkbox preenchido permitir avançar para proposta
 
 E preencher Checkbox de privacidade
-  Wait Until Element Is Visible
-  Checkbox Should Be Selected      css:input.jss4
+  Wait Until Element Is Visible     css:input.jss4
+  Checkbox Should Be Selected       css:input.jss4
 
 
-PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CHECKBOX DE POLITICA DE PRIVACIDADE | CASO 01: Checkbox não preenchido não permitir avançar para proposta
+# PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CHECKBOX DE POLITICA DE PRIVACIDADE | CASO 01: Checkbox não preenchido não permitir avançar para proposta
 
-
+# E preencher Checkbox de privacidade
+#   Checkbox Should Be Selected      css:input.jss4
 
 
 ## FLUXO DE CADASTRO PAGE 3 -ASSINATURA ###

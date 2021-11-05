@@ -14,7 +14,7 @@ Page_1 - Fluxo de cadastro | Caso de teste 01: Cadastro simples "caminho feliz"
   Dado que estou na pagina home
   E clicar no botão Cadastre-se
   E preencher "Qualidade Qualidade" no campo nome
-  E preencher "eder40.estevan@floraenergia.com.br" no campo e-mail
+  E preencher "eder_estevan@hotmail.com" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
   E preencher "São Carlos" no campo cidade
@@ -33,7 +33,7 @@ PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 02: No campo "Nome" NÃ
   Dado que estou na pagina home
   E clicar no botão Cadastre-se
   E preencher "Qualidade" no campo nome
-  E preencher "eder40.estevan@floraenergia.com.br" no campo e-mail
+  E preencher "marcos.arantes@floraenergia.com.br" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
   E preencher "São Carlos" no campo cidade
@@ -178,7 +178,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO EMAIL | CASO 02: No campo "Email" n
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
   E preencher "São Carlos" no campo cidade
-  E preencher "1000" no campo Conta de luz
+  E preencher "1000" no campo Conta de luz'
   # E preencher " " no campo Cód Promocional
   Quando eu clicar no botão "Avançar" no fluxo de cadastro
   Então não permitir avançar para proposta
@@ -578,7 +578,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CAMPO CÓD PROMOCIONAL | CASO 05: No camp
 
        ## FLUXO DE CADASTRO PAGE 1 - VALIDANDO CHECKBOX DE POLITICA DE PRIVACIDADE ##
 #
-PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CHECKBOX DE POLITICA DE PRIVACIDADE | CASO 01: Com o Checkbox preenchido permitir avançar para proposta
+PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CHECKBOX DE POLITICA DE PRIVACIDADE | CASO 01: Permitir avançar para proposta se ckeckbox estiver preenchido
   [Tags]  Page1_privacidade_caso1
 
   Dado que estou na pagina home
