@@ -14,7 +14,7 @@ Page_1 - Fluxo de cadastro | Caso de teste 01: Cadastro simples "caminho feliz"
   Dado que estou na pagina home
   E clicar no botão Cadastre-se
   E preencher "Qualidade Qualidade" no campo nome
-  E preencher "eder_estevan@hotmail.com" no campo e-mail
+  E preencher "eder40.estevan@floraenergia.com.br" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
   E preencher "São Carlos" no campo cidade
@@ -33,7 +33,7 @@ PAGE_1 - FLUXO DE CADASTRO | VALIDANDO CAMPO NOME | CASO 02: No campo "Nome" NÃ
   Dado que estou na pagina home
   E clicar no botão Cadastre-se
   E preencher "Qualidade" no campo nome
-  E preencher "marcos.arantes@floraenergia.com.br" no campo e-mail
+  E preencher "eder40.estevan@floraenergia.com.br" no campo e-mail
   E preencher "11111111111" no campo celular
   E preencher "SP" no campo uf
   E preencher "São Carlos" no campo cidade
@@ -596,7 +596,7 @@ PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CHECKBOX DE POLITICA DE PRIVACIDADE | CAS
 
 #
 
-PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CHECKBOX DE POLITICA DE PRIVACIDADE | CASO 01: Checkbox não preenchido não permitir avançar para proposta
+# PAGE_1 | FLUXO DE CADASTRO | VALIDANDO CHECKBOX DE POLITICA DE PRIVACIDADE | CASO 01: Checkbox não preenchido não permitir avançar para proposta
 #
 #
 #
