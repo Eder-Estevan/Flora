@@ -1,145 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20211108 13:34:21.212" rpa="false" schemaversion="2">
-<suite id="s1" name="Areausuario" source="C:\Projetos\RobotFlora\areausuario">
-<suite id="s1-s1" name="Login" source="C:\Projetos\RobotFlora\areausuario\Login.robot">
-<test id="s1-s1-t1" name="Login de usuário administrativo | Caso de teste 01: Realizar login simples">
-<kw name="Abrir navegador" library="ResourceLogin" type="SETUP">
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20211108 20:40:42.139" rpa="false" schemaversion="2">
+<suite id="s1" name="Areaadm" source="C:\Projetos\RobotFlora\areaadm">
+<suite id="s1-s1" name="Contratos" source="C:\Projetos\RobotFlora\areaadm\Contratos.robot">
+<test id="s1-s1-t1" name="Área do administrativo | Caso de teste 01: Logar na área do adm e realizar &quot;Download All&quot; do contrato">
+<kw name="Abrir navegador" library="ResourceContratos" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20211108 13:34:21.772" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
-<status status="PASS" starttime="20211108 13:34:21.770" endtime="20211108 13:34:35.332"/>
+<msg timestamp="20211108 20:40:42.545" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
+<status status="PASS" starttime="20211108 20:40:42.545" endtime="20211108 20:40:55.932"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20211108 13:34:35.332" endtime="20211108 13:34:35.479"/>
+<status status="PASS" starttime="20211108 20:40:55.932" endtime="20211108 20:40:56.047"/>
 </kw>
-<status status="PASS" starttime="20211108 13:34:21.770" endtime="20211108 13:34:35.479"/>
+<status status="PASS" starttime="20211108 20:40:42.545" endtime="20211108 20:40:56.047"/>
 </kw>
-<kw name="Dado que estou na pagina home" library="ResourceLogin">
+<kw name="Dado que estou na pagina home" library="ResourceContratos">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20211108 13:34:35.481" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
-<status status="PASS" starttime="20211108 13:34:35.480" endtime="20211108 13:34:41.158"/>
+<msg timestamp="20211108 20:40:56.049" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
+<status status="PASS" starttime="20211108 20:40:56.048" endtime="20211108 20:40:58.902"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${VALIDAR_PAGINA}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20211108 13:34:41.163" level="INFO">Page title is 'Flora Energia'.</msg>
-<status status="PASS" starttime="20211108 13:34:41.158" endtime="20211108 13:34:41.164"/>
+<msg timestamp="20211108 20:40:58.908" level="INFO">Page title is 'Flora Energia'.</msg>
+<status status="PASS" starttime="20211108 20:40:58.902" endtime="20211108 20:40:58.908"/>
 </kw>
-<status status="PASS" starttime="20211108 13:34:35.480" endtime="20211108 13:34:41.164"/>
+<status status="PASS" starttime="20211108 20:40:56.048" endtime="20211108 20:40:58.908"/>
 </kw>
-<kw name="E clicar no botão &quot;Entrar&quot;" library="ResourceLogin">
+<kw name="E clicar no botão &quot;Entrar&quot;" library="ResourceContratos">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:a#login_lp</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211108 13:34:41.172" endtime="20211108 13:34:41.213"/>
+<status status="PASS" starttime="20211108 20:40:58.909" endtime="20211108 20:40:58.938"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:a#login_lp</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211108 13:34:41.213" level="INFO">Clicking element 'css:a#login_lp'.</msg>
-<status status="PASS" starttime="20211108 13:34:41.213" endtime="20211108 13:34:42.626"/>
+<msg timestamp="20211108 20:40:58.938" level="INFO">Clicking element 'css:a#login_lp'.</msg>
+<status status="PASS" starttime="20211108 20:40:58.938" endtime="20211108 20:41:01.925"/>
 </kw>
-<status status="PASS" starttime="20211108 13:34:41.171" endtime="20211108 13:34:42.627"/>
+<status status="PASS" starttime="20211108 20:40:58.909" endtime="20211108 20:41:01.925"/>
 </kw>
-<kw name="E preencher com usuario administrativo &quot;eder.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceLogin" sourcename="E preencher com usuario administrativo &quot;${EMAIL_ADM}&quot; no campo e-mail">
+<kw name="E preencher com usuario administrativo &quot;eder.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceContratos" sourcename="E preencher com usuario administrativo &quot;${EMAIL_ADM}&quot; no campo e-mail">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:input#standard-password-input</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211108 13:34:42.629" endtime="20211108 13:34:42.671"/>
+<status status="PASS" starttime="20211108 20:41:01.926" endtime="20211108 20:41:01.951"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>css:input#standard-password-input</arg>
 <arg>${EMAIL_ADM}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211108 13:34:42.672" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
-<status status="PASS" starttime="20211108 13:34:42.672" endtime="20211108 13:34:42.962"/>
+<msg timestamp="20211108 20:41:01.953" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
+<status status="PASS" starttime="20211108 20:41:01.952" endtime="20211108 20:41:02.072"/>
 </kw>
-<status status="PASS" starttime="20211108 13:34:42.627" endtime="20211108 13:34:42.962"/>
+<status status="PASS" starttime="20211108 20:41:01.926" endtime="20211108 20:41:02.072"/>
 </kw>
-<kw name="Quando eu clicar no botão &quot;Avançar&quot;" library="ResourceLogin">
+<kw name="E clicar no botão &quot;Avançar&quot;" library="ResourceContratos">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:button.read_more_btn</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211108 13:34:42.963" endtime="20211108 13:34:43.015"/>
+<status status="PASS" starttime="20211108 20:41:02.073" endtime="20211108 20:41:02.093"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:button.read_more_btn</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211108 13:34:43.016" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
-<status status="PASS" starttime="20211108 13:34:43.016" endtime="20211108 13:34:43.113"/>
+<msg timestamp="20211108 20:41:02.094" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211108 20:41:02.094" endtime="20211108 20:41:02.159"/>
 </kw>
-<status status="PASS" starttime="20211108 13:34:42.963" endtime="20211108 13:34:43.113"/>
+<status status="PASS" starttime="20211108 20:41:02.073" endtime="20211108 20:41:02.159"/>
 </kw>
-<kw name="Então deverá inserir corretamente a senha administrativa &quot;Eder@29282726&quot;" library="ResourceLogin" sourcename="Então deverá inserir corretamente a senha administrativa &quot;${SENHA_ADM}&quot;">
+<kw name="E deverá inserir corretamente a senha administrativa &quot;Eder@29282726&quot;" library="ResourceContratos" sourcename="E deverá inserir corretamente a senha administrativa &quot;${SENHA_ADM}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:input#standard-password-input[name=password]</arg>
+<arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211108 13:34:43.114" endtime="20211108 13:34:44.490"/>
+<status status="PASS" starttime="20211108 20:41:02.160" endtime="20211108 20:41:03.696"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>css:input#standard-password-input[name=password]</arg>
 <arg>${SENHA_ADM}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211108 13:34:44.490" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
-<status status="PASS" starttime="20211108 13:34:44.490" endtime="20211108 13:34:44.607"/>
+<msg timestamp="20211108 20:41:03.697" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
+<status status="PASS" starttime="20211108 20:41:03.696" endtime="20211108 20:41:03.770"/>
 </kw>
-<status status="PASS" starttime="20211108 13:34:43.114" endtime="20211108 13:34:44.607"/>
+<status status="PASS" starttime="20211108 20:41:02.159" endtime="20211108 20:41:03.770"/>
 </kw>
-<kw name="E clicar no botão &quot;Avançar&quot; para logar na aplicação" library="ResourceLogin">
+<kw name="E clicar no botão &quot;Avançar&quot; para logar na aplicação" library="ResourceContratos">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:button.read_more_btn</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211108 13:34:44.608" endtime="20211108 13:34:44.629"/>
+<status status="PASS" starttime="20211108 20:41:03.771" endtime="20211108 20:41:03.785"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:button.read_more_btn</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211108 13:34:44.630" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
-<status status="PASS" starttime="20211108 13:34:44.629" endtime="20211108 13:34:44.671"/>
+<msg timestamp="20211108 20:41:03.785" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211108 20:41:03.785" endtime="20211108 20:41:03.813"/>
 </kw>
-<status status="PASS" starttime="20211108 13:34:44.608" endtime="20211108 13:34:44.673"/>
+<status status="PASS" starttime="20211108 20:41:03.770" endtime="20211108 20:41:03.813"/>
 </kw>
-<kw name="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;Contratos&quot;" library="ResourceLogin" sourcename="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;${CONTRATOS_HOME}&quot;">
+<kw name="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;Contratos&quot;" library="ResourceContratos" sourcename="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;${CONTRATOS_HOME}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:h1.sc-jffHpj.lLwQZ</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211108 13:34:44.674" endtime="20211108 13:34:48.711"/>
+<status status="PASS" starttime="20211108 20:41:03.814" endtime="20211108 20:41:08.476"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${CONTRATOS_HOME}</arg>
 <arg>Contratos</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20211108 13:34:48.711" endtime="20211108 13:34:48.712"/>
+<status status="PASS" starttime="20211108 20:41:08.476" endtime="20211108 20:41:08.477"/>
 </kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20211108 13:34:48.870" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20211108 13:34:48.712" endtime="20211108 13:34:48.871"/>
+<status status="PASS" starttime="20211108 20:41:03.814" endtime="20211108 20:41:08.477"/>
 </kw>
-<status status="PASS" starttime="20211108 13:34:44.673" endtime="20211108 13:34:48.871"/>
+<kw name="Quando eu clicar no botão &quot;Download All&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211108 20:41:08.478" endtime="20211108 20:41:08.504"/>
 </kw>
-<tag>Login_UsuarioAdm_Caso1</tag>
-<status status="PASS" starttime="20211108 13:34:21.769" endtime="20211108 13:34:48.872"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211108 20:41:08.505" level="INFO">Clicking element 'css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn'.</msg>
+<status status="PASS" starttime="20211108 20:41:08.504" endtime="20211108 20:41:08.741"/>
+</kw>
+<status status="PASS" starttime="20211108 20:41:08.478" endtime="20211108 20:41:08.741"/>
+</kw>
+<kw name="Então deverá realizar o download do arquivo" library="ResourceContratos">
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${HOME_DIR}</var>
+<arg>~</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20211108 20:41:08.742" level="INFO">${HOME_DIR} = C:\Users\Flora-Qa</msg>
+<status status="PASS" starttime="20211108 20:41:08.742" endtime="20211108 20:41:08.742"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${DOWNLOAD_DIR}</var>
+<arg>${HOME_DIR}</arg>
+<arg>DownloadS</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20211108 20:41:08.743" level="INFO">${DOWNLOAD_DIR} = C:\Users\Flora-Qa\DownloadS</msg>
+<status status="PASS" starttime="20211108 20:41:08.742" endtime="20211108 20:41:08.743"/>
+</kw>
+<kw name="List Directory" library="OperatingSystem">
+<var>@{ITEMS}</var>
+<arg>${DOWNLOAD_DIR}</arg>
+<arg>Download.Excel</arg>
+<doc>Returns and logs items in a directory, optionally filtered with ``pattern``.</doc>
+<msg timestamp="20211108 20:41:08.743" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\Flora-Qa\DownloadS"&gt;C:\Users\Flora-Qa\DownloadS&lt;/a&gt;'.</msg>
+<msg timestamp="20211108 20:41:08.744" level="INFO">0 items:
+</msg>
+<msg timestamp="20211108 20:41:08.744" level="INFO">@{ITEMS} = [ ]</msg>
+<status status="PASS" starttime="20211108 20:41:08.743" endtime="20211108 20:41:08.744"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211108 20:41:08.745" endtime="20211108 20:41:08.746"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211108 20:41:08.746" endtime="20211108 20:41:08.746"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211108 20:41:08.747" endtime="20211108 20:41:08.747"/>
+</kw>
+<status status="PASS" starttime="20211108 20:41:08.742" endtime="20211108 20:41:08.747"/>
+</kw>
+<tag>AreaAdm_Contratos_Caso1</tag>
+<status status="PASS" starttime="20211108 20:40:42.544" endtime="20211108 20:41:08.747"/>
 </test>
-<status status="PASS" starttime="20211108 13:34:21.237" endtime="20211108 13:34:48.873"/>
+<status status="PASS" starttime="20211108 20:40:42.155" endtime="20211108 20:41:08.750"/>
 </suite>
-<status status="PASS" starttime="20211108 13:34:21.213" endtime="20211108 13:34:48.875"/>
+<status status="PASS" starttime="20211108 20:40:42.140" endtime="20211108 20:41:08.758"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Login_UsuarioAdm_Caso1</stat>
+<stat pass="1" fail="0" skip="0">AreaAdm_Contratos_Caso1</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Areausuario">Areausuario</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login">Areausuario.Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Areaadm">Areaadm</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Contratos">Areaadm.Contratos</stat>
 </suite>
 </statistics>
 <errors>
