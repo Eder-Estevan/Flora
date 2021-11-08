@@ -1,6 +1,7 @@
 *** Settings ***
 
 Library		          SeleniumLibrary
+Library             FakerLibrary
 
 
 *** Variables ***
@@ -22,21 +23,35 @@ Dado que estou na pagina home
     Go To     ${URL}
     Title Should Be   ${VALIDAR_PAGINA}
 
-# ### lOGIN ###
-# E cliquei no botão Entrar
-#     Click Element    id=login_lp
-#     Location Should Be    https://staging.floraenergia.com.br/login
-#     # Page Should Contain Image    class=login-wrapper
-#     # Title Should Be    class=login-wrapper
-#     # Page Should Contain Link
+### LOGIN DE USUÁRIO ###
+Login de usuário | Caso de teste 01: Realizar login simples
+
 #
-# E inseri o e-mail Valido
-#   Click Element    css:input#standard-password-input
-#   Input Text       css:input#standard-password-input    ${EMAIL_VALIDO}
-#
-#
-# E Cliquei na botão "Avançar"
-#   Click Element    css:div.sc-gggoXN.cbnvNz
-#
-# Quando Inseri a senha no campo senha
-#   Click Element     css:input[class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"][name=password]
+
+### LOGIN DE USUÁRIO ADMINISTRADOR ###
+Login de usuário administrativo | Caso de teste 01: Realizar login simples
+
+E clicar no botão "Entrar"
+  Wait Until Element Is Visible     css:a#login_lp
+  Click Element                     css:a#login_lp
+
+E preencher com usuario administrativo "${EMAIL_ADM}" no campo e-mail
+  Wait Until Element Is Visible    css:input#standard-password-input
+  Input Text                       css:input#standard-password-input   ${EMAIL_ADM}
+
+Quando eu clicar no botão "Avançar"
+  Wait Until Element Is Visible     css:button.read_more_btn
+  Click Element                     css:button.read_more_btn
+
+Então deverá inserir corretamente a senha administrativa "${SENHA_ADM}"
+  Wait Until Element Is Visible     css:input#standard-password-input[name=password]
+  Input Text                        css:input#standard-password-input[name=password]    ${SENHA_ADM}
+
+E clicar no botão "Avançar" para logar na aplicação
+  Wait Until Element Is Visible     css:button.read_more_btn
+  Click Element                     css:button.read_more_btn
+
+E o login deverá ser realizado com sucesso apresentando a área administrativa home "${CONTRATOS_HOME}"
+  Wait Until Element Is Visible     css:h1.sc-jffHpj.lLwQZ
+  Should Be Equal                  ${CONTRATOS_HOME}    Contratos
+  Capture Page Screenshot

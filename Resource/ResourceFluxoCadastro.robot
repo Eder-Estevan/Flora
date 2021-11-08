@@ -19,9 +19,9 @@ Abrir navegador
 Fechar navegador
     Close Browser
 
-#
 
-### FLUXO DE CADASTRO PAGE 1 - CADASTRO ###
+    ### LOGIN DE USUÁRIO ###
+
 Page_1 - Fluxo de cadastro | Caso de teste 01: Cadastro simples "caminho feliz"
 
 Dado que estou na pagina home
