@@ -1,124 +1,1129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20211112 21:53:27.994" rpa="false" schemaversion="2">
-<suite id="s1" name="Areaadm" source="C:\Projetos\RobotFlora\areaadm">
-<suite id="s1-s1" name="Contratos" source="C:\Projetos\RobotFlora\areaadm\Contratos.robot">
-<test id="s1-s1-t1" name="AREA ADM | CONTA DE LUZ | Caso de teste 02: Logar na área do adm, entrar em &quot;Refino Propostas&quot; realizar pesquisa por usuaário">
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20211113 17:54:02.766" rpa="false" schemaversion="2">
+<suite id="s1" name="Contratos" source="C:\Projetos\RobotFlora\AreaAdm\Contratos.robot">
+<test id="s1-t1" name="AREA ADM | CONTRATOS | Caso de teste 01: Logar na área do adm e realizar &quot;Download All&quot; do contrato">
 <kw name="Abrir navegador" library="ResourceContratos" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20211112 21:53:28.388" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
-<status status="PASS" starttime="20211112 21:53:28.388" endtime="20211112 21:53:32.884"/>
+<msg timestamp="20211113 17:54:03.175" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
+<status status="PASS" starttime="20211113 17:54:03.175" endtime="20211113 17:54:06.820"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20211112 21:53:32.884" endtime="20211112 21:53:33.013"/>
+<status status="PASS" starttime="20211113 17:54:06.820" endtime="20211113 17:54:06.943"/>
 </kw>
-<status status="PASS" starttime="20211112 21:53:28.388" endtime="20211112 21:53:33.013"/>
+<status status="PASS" starttime="20211113 17:54:03.174" endtime="20211113 17:54:06.943"/>
 </kw>
 <kw name="Dado que estou na pagina home" library="ResourceContratos">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20211112 21:53:33.015" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
-<status status="PASS" starttime="20211112 21:53:33.015" endtime="20211112 21:53:34.397"/>
+<msg timestamp="20211113 17:54:06.945" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
+<status status="PASS" starttime="20211113 17:54:06.944" endtime="20211113 17:54:08.397"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${VALIDAR_PAGINA}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20211112 21:53:34.401" level="INFO">Page title is 'Flora Energia'.</msg>
-<status status="PASS" starttime="20211112 21:53:34.397" endtime="20211112 21:53:34.402"/>
+<msg timestamp="20211113 17:54:08.401" level="INFO">Page title is 'Flora Energia'.</msg>
+<status status="PASS" starttime="20211113 17:54:08.397" endtime="20211113 17:54:08.401"/>
 </kw>
-<status status="PASS" starttime="20211112 21:53:33.014" endtime="20211112 21:53:34.402"/>
+<status status="PASS" starttime="20211113 17:54:06.943" endtime="20211113 17:54:08.401"/>
 </kw>
 <kw name="E clicar no botão &quot;Entrar&quot;" library="ResourceContratos">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:a#login_lp</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211112 21:53:34.402" endtime="20211112 21:53:34.428"/>
+<status status="PASS" starttime="20211113 17:54:08.402" endtime="20211113 17:54:08.426"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:a#login_lp</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211112 21:53:34.429" level="INFO">Clicking element 'css:a#login_lp'.</msg>
-<status status="PASS" starttime="20211112 21:53:34.429" endtime="20211112 21:53:35.730"/>
+<msg timestamp="20211113 17:54:08.427" level="INFO">Clicking element 'css:a#login_lp'.</msg>
+<status status="PASS" starttime="20211113 17:54:08.426" endtime="20211113 17:54:09.545"/>
 </kw>
-<status status="PASS" starttime="20211112 21:53:34.402" endtime="20211112 21:53:35.730"/>
+<status status="PASS" starttime="20211113 17:54:08.401" endtime="20211113 17:54:09.545"/>
 </kw>
 <kw name="E preencher com usuario administrativo &quot;eder.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceContratos" sourcename="E preencher com usuario administrativo &quot;${EMAIL_ADM}&quot; no campo e-mail">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:input#standard-password-input</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211112 21:53:35.731" endtime="20211112 21:53:35.755"/>
+<status status="PASS" starttime="20211113 17:54:09.547" endtime="20211113 17:54:09.568"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>css:input#standard-password-input</arg>
 <arg>${EMAIL_ADM}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211112 21:53:35.755" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
-<status status="PASS" starttime="20211112 21:53:35.755" endtime="20211112 21:53:35.880"/>
+<msg timestamp="20211113 17:54:09.569" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
+<status status="PASS" starttime="20211113 17:54:09.568" endtime="20211113 17:54:09.760"/>
 </kw>
-<status status="PASS" starttime="20211112 21:53:35.731" endtime="20211112 21:53:35.880"/>
+<status status="PASS" starttime="20211113 17:54:09.546" endtime="20211113 17:54:09.760"/>
 </kw>
 <kw name="E clicar no botão &quot;Avançar&quot;" library="ResourceContratos">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:button.read_more_btn</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211112 21:53:35.881" endtime="20211112 21:53:35.898"/>
+<status status="PASS" starttime="20211113 17:54:09.761" endtime="20211113 17:54:09.779"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:button.read_more_btn</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211112 21:53:35.898" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
-<status status="PASS" starttime="20211112 21:53:35.898" endtime="20211112 21:53:35.956"/>
+<msg timestamp="20211113 17:54:09.779" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:54:09.779" endtime="20211113 17:54:09.854"/>
 </kw>
-<status status="PASS" starttime="20211112 21:53:35.881" endtime="20211112 21:53:35.956"/>
+<status status="PASS" starttime="20211113 17:54:09.761" endtime="20211113 17:54:09.854"/>
 </kw>
 <kw name="E deverá inserir corretamente a senha administrativa &quot;Eder@29282726&quot;" library="ResourceContratos" sourcename="E deverá inserir corretamente a senha administrativa &quot;${SENHA_ADM}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:input#standard-password-input[name=password]</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211112 21:53:35.958" endtime="20211112 21:53:38.143"/>
+<status status="PASS" starttime="20211113 17:54:09.856" endtime="20211113 17:54:13.349"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>css:input#standard-password-input[name=password]</arg>
 <arg>${SENHA_ADM}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211112 21:53:38.143" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
-<status status="PASS" starttime="20211112 21:53:38.143" endtime="20211112 21:53:38.217"/>
+<msg timestamp="20211113 17:54:13.350" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
+<status status="PASS" starttime="20211113 17:54:13.350" endtime="20211113 17:54:13.446"/>
 </kw>
-<status status="PASS" starttime="20211112 21:53:35.957" endtime="20211112 21:53:38.217"/>
+<status status="PASS" starttime="20211113 17:54:09.855" endtime="20211113 17:54:13.446"/>
 </kw>
 <kw name="E clicar no botão &quot;Avançar&quot; para logar na aplicação" library="ResourceContratos">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:button.read_more_btn</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211112 21:53:38.218" endtime="20211112 21:53:38.236"/>
+<status status="PASS" starttime="20211113 17:54:13.446" endtime="20211113 17:54:13.461"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:button.read_more_btn</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211112 21:53:38.237" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
-<status status="PASS" starttime="20211112 21:53:38.236" endtime="20211112 21:53:38.266"/>
+<msg timestamp="20211113 17:54:13.461" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:54:13.461" endtime="20211113 17:54:13.498"/>
 </kw>
-<status status="PASS" starttime="20211112 21:53:38.217" endtime="20211112 21:53:38.266"/>
+<status status="PASS" starttime="20211113 17:54:13.446" endtime="20211113 17:54:13.498"/>
 </kw>
 <kw name="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;Contratos&quot;" library="ResourceContratos" sourcename="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;${CONTRATOS_HOME}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:h1.sc-jffHpj.lLwQZ</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211112 21:53:38.267" endtime="20211112 21:53:42.720"/>
+<status status="PASS" starttime="20211113 17:54:13.500" endtime="20211113 17:54:18.541"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${CONTRATOS_HOME}</arg>
 <arg>Contratos</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20211112 21:53:42.720" endtime="20211112 21:53:42.720"/>
+<status status="PASS" starttime="20211113 17:54:18.541" endtime="20211113 17:54:18.541"/>
 </kw>
-<status status="PASS" starttime="20211112 21:53:38.267" endtime="20211112 21:53:42.720"/>
+<status status="PASS" starttime="20211113 17:54:13.499" endtime="20211113 17:54:18.541"/>
+</kw>
+<kw name="Quando eu clicar no botão &quot;Download All&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:18.542" endtime="20211113 17:54:18.560"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:18.561" level="INFO">Clicking element 'css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn'.</msg>
+<status status="PASS" starttime="20211113 17:54:18.561" endtime="20211113 17:54:18.834"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:18.542" endtime="20211113 17:54:18.835"/>
+</kw>
+<kw name="Então deverá realizar o download do arquivo Excel" library="ResourceContratos">
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${HOME_DIR}</var>
+<arg>~</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20211113 17:54:18.836" level="INFO">${HOME_DIR} = C:\Users\Flora-Qa</msg>
+<status status="PASS" starttime="20211113 17:54:18.835" endtime="20211113 17:54:18.836"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${DOWNLOAD_DIR}</var>
+<arg>${HOME_DIR}</arg>
+<arg>DownloadS</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20211113 17:54:18.836" level="INFO">${DOWNLOAD_DIR} = C:\Users\Flora-Qa\DownloadS</msg>
+<status status="PASS" starttime="20211113 17:54:18.836" endtime="20211113 17:54:18.836"/>
+</kw>
+<kw name="List Directory" library="OperatingSystem">
+<var>@{ITEMS}</var>
+<arg>${DOWNLOAD_DIR}</arg>
+<arg>Download.Excel</arg>
+<doc>Returns and logs items in a directory, optionally filtered with ``pattern``.</doc>
+<msg timestamp="20211113 17:54:18.836" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\Flora-Qa\DownloadS"&gt;C:\Users\Flora-Qa\DownloadS&lt;/a&gt;'.</msg>
+<msg timestamp="20211113 17:54:18.837" level="INFO">0 items:
+</msg>
+<msg timestamp="20211113 17:54:18.837" level="INFO">@{ITEMS} = [ ]</msg>
+<status status="PASS" starttime="20211113 17:54:18.836" endtime="20211113 17:54:18.837"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:54:18.837" endtime="20211113 17:54:18.838"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:54:18.838" endtime="20211113 17:54:18.838"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:54:18.838" endtime="20211113 17:54:18.839"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:18.835" endtime="20211113 17:54:18.839"/>
+</kw>
+<kw name="Fechar navegador" library="ResourceContratos" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211113 17:54:18.840" endtime="20211113 17:54:20.996"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:18.839" endtime="20211113 17:54:20.996"/>
+</kw>
+<tag>AreaAdm_Contratos_Caso1</tag>
+<status status="PASS" starttime="20211113 17:54:03.174" endtime="20211113 17:54:20.996"/>
+</test>
+<test id="s1-t2" name="AREA ADM | CONTRATOS | Caso de teste 02: Logar na área do adm e realizar pesquisa por contrato">
+<kw name="Abrir navegador" library="ResourceContratos" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211113 17:54:20.998" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
+<status status="PASS" starttime="20211113 17:54:20.998" endtime="20211113 17:54:25.153"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211113 17:54:25.153" endtime="20211113 17:54:25.413"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:20.998" endtime="20211113 17:54:25.413"/>
+</kw>
+<kw name="Dado que estou na pagina home" library="ResourceContratos">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211113 17:54:25.416" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
+<status status="PASS" starttime="20211113 17:54:25.415" endtime="20211113 17:54:26.849"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${VALIDAR_PAGINA}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211113 17:54:26.854" level="INFO">Page title is 'Flora Energia'.</msg>
+<status status="PASS" starttime="20211113 17:54:26.850" endtime="20211113 17:54:26.854"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:25.415" endtime="20211113 17:54:26.855"/>
+</kw>
+<kw name="E clicar no botão &quot;Entrar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:26.855" endtime="20211113 17:54:26.877"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:26.877" level="INFO">Clicking element 'css:a#login_lp'.</msg>
+<status status="PASS" starttime="20211113 17:54:26.877" endtime="20211113 17:54:27.990"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:26.855" endtime="20211113 17:54:27.990"/>
+</kw>
+<kw name="E preencher com usuario administrativo &quot;eder.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceContratos" sourcename="E preencher com usuario administrativo &quot;${EMAIL_ADM}&quot; no campo e-mail">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:27.993" endtime="20211113 17:54:28.016"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<arg>${EMAIL_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:28.017" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
+<status status="PASS" starttime="20211113 17:54:28.016" endtime="20211113 17:54:28.166"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:27.991" endtime="20211113 17:54:28.167"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:28.168" endtime="20211113 17:54:28.188"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:28.188" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:54:28.188" endtime="20211113 17:54:28.255"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:28.167" endtime="20211113 17:54:28.256"/>
+</kw>
+<kw name="E deverá inserir corretamente a senha administrativa &quot;Eder@29282726&quot;" library="ResourceContratos" sourcename="E deverá inserir corretamente a senha administrativa &quot;${SENHA_ADM}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:28.257" endtime="20211113 17:54:31.600"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>${SENHA_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:31.600" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
+<status status="PASS" starttime="20211113 17:54:31.600" endtime="20211113 17:54:31.700"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:28.257" endtime="20211113 17:54:31.700"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot; para logar na aplicação" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:31.702" endtime="20211113 17:54:31.719"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:31.720" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:54:31.720" endtime="20211113 17:54:31.756"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:31.700" endtime="20211113 17:54:31.756"/>
+</kw>
+<kw name="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;Contratos&quot;" library="ResourceContratos" sourcename="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;${CONTRATOS_HOME}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:31.760" endtime="20211113 17:54:36.199"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${CONTRATOS_HOME}</arg>
+<arg>Contratos</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20211113 17:54:36.199" endtime="20211113 17:54:36.200"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:31.759" endtime="20211113 17:54:36.200"/>
+</kw>
+<kw name="E descrever no campo SEARCH &quot;3433&quot;" library="ResourceContratos" sourcename="E descrever no campo SEARCH &quot;${N_CONTRATO}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:div.sc-eCbnUT.fElMzr</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:36.201" endtime="20211113 17:54:36.221"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:div.sc-eCbnUT.fElMzr</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:36.221" level="INFO">Clicking element 'css:div.sc-eCbnUT.fElMzr'.</msg>
+<status status="PASS" starttime="20211113 17:54:36.221" endtime="20211113 17:54:36.304"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input.sc-iBzEeX.glZmJR</arg>
+<arg>${N_CONTRATO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:36.305" level="INFO">Typing text '3433' into text field 'css:input.sc-iBzEeX.glZmJR'.</msg>
+<status status="PASS" starttime="20211113 17:54:36.304" endtime="20211113 17:54:36.425"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:36.200" endtime="20211113 17:54:36.425"/>
+</kw>
+<kw name="Quando eu clicar no botão &quot;Search&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div[1]/div/div/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:36.426" endtime="20211113 17:54:36.512"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div[1]/div/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:36.512" level="INFO">Clicking element 'xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20211113 17:54:36.512" endtime="20211113 17:54:36.753"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211113 17:54:44.760" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20211113 17:54:36.754" endtime="20211113 17:54:44.760"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:36.426" endtime="20211113 17:54:44.760"/>
+</kw>
+<kw name="Então deverá realizar buscar informações retornando o valor pesquisado &quot;3433&quot;" library="ResourceContratos" sourcename="Então deverá realizar buscar informações retornando o valor pesquisado &quot;${N_VALOR}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a.sc-jNnpgg.jclDow[href="/contratos/3433"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:44.761" endtime="20211113 17:54:44.786"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211113 17:54:44.920" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-66.png"&gt;&lt;img src="selenium-screenshot-66.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211113 17:54:44.786" endtime="20211113 17:54:44.920"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:44.761" endtime="20211113 17:54:44.920"/>
+</kw>
+<kw name="Fechar navegador" library="ResourceContratos" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211113 17:54:44.921" endtime="20211113 17:54:47.178"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:44.921" endtime="20211113 17:54:47.178"/>
+</kw>
+<tag>AreaAdm_Contratos_Caso2</tag>
+<status status="PASS" starttime="20211113 17:54:20.997" endtime="20211113 17:54:47.179"/>
+</test>
+<test id="s1-t3" name="AREA ADM | CONTA DE LUZ | Caso de teste 01: Logar na área do adm entrar em &quot;Conta de Luz&quot; e clicar &quot;Download All&quot; excel">
+<kw name="Abrir navegador" library="ResourceContratos" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211113 17:54:47.181" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
+<status status="PASS" starttime="20211113 17:54:47.181" endtime="20211113 17:54:50.646"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211113 17:54:50.646" endtime="20211113 17:54:50.790"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:47.180" endtime="20211113 17:54:50.791"/>
+</kw>
+<kw name="Dado que estou na pagina home" library="ResourceContratos">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211113 17:54:50.792" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
+<status status="PASS" starttime="20211113 17:54:50.792" endtime="20211113 17:54:52.218"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${VALIDAR_PAGINA}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211113 17:54:52.222" level="INFO">Page title is 'Flora Energia'.</msg>
+<status status="PASS" starttime="20211113 17:54:52.218" endtime="20211113 17:54:52.222"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:50.791" endtime="20211113 17:54:52.222"/>
+</kw>
+<kw name="E clicar no botão &quot;Entrar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:52.222" endtime="20211113 17:54:52.256"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:52.258" level="INFO">Clicking element 'css:a#login_lp'.</msg>
+<status status="PASS" starttime="20211113 17:54:52.257" endtime="20211113 17:54:53.380"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:52.222" endtime="20211113 17:54:53.380"/>
+</kw>
+<kw name="E preencher com usuario administrativo &quot;eder.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceContratos" sourcename="E preencher com usuario administrativo &quot;${EMAIL_ADM}&quot; no campo e-mail">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:53.383" endtime="20211113 17:54:53.408"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<arg>${EMAIL_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:53.408" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
+<status status="PASS" starttime="20211113 17:54:53.408" endtime="20211113 17:54:53.587"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:53.382" endtime="20211113 17:54:53.587"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:53.588" endtime="20211113 17:54:53.608"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:53.608" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:54:53.608" endtime="20211113 17:54:53.672"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:53.588" endtime="20211113 17:54:53.672"/>
+</kw>
+<kw name="E deverá inserir corretamente a senha administrativa &quot;Eder@29282726&quot;" library="ResourceContratos" sourcename="E deverá inserir corretamente a senha administrativa &quot;${SENHA_ADM}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:53.673" endtime="20211113 17:54:55.662"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>${SENHA_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:55.663" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
+<status status="PASS" starttime="20211113 17:54:55.663" endtime="20211113 17:54:55.758"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:53.672" endtime="20211113 17:54:55.758"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot; para logar na aplicação" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:55.759" endtime="20211113 17:54:55.776"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:55.778" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:54:55.777" endtime="20211113 17:54:55.818"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:55.758" endtime="20211113 17:54:55.819"/>
+</kw>
+<kw name="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;Contratos&quot;" library="ResourceContratos" sourcename="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;${CONTRATOS_HOME}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:55.820" endtime="20211113 17:54:59.652"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${CONTRATOS_HOME}</arg>
+<arg>Contratos</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20211113 17:54:59.652" endtime="20211113 17:54:59.652"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:55.819" endtime="20211113 17:54:59.652"/>
+</kw>
+<kw name="Quando clicar na opção &quot;Conta Luz&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[1]/nav/a[2]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:59.653" endtime="20211113 17:54:59.688"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[1]/nav/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:54:59.688" level="INFO">Clicking element 'Xpath=//*[@id="root"]/div[1]/div[1]/nav/a[2]'.</msg>
+<status status="PASS" starttime="20211113 17:54:59.688" endtime="20211113 17:54:59.798"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:59.653" endtime="20211113 17:54:59.798"/>
+</kw>
+<kw name="E apresentar a home de &quot;Conta de Luz&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:54:59.800" endtime="20211113 17:55:02.219"/>
+</kw>
+<status status="PASS" starttime="20211113 17:54:59.799" endtime="20211113 17:55:02.220"/>
+</kw>
+<kw name="E clicar no botão &quot;Dowload All&quot; da conta de luz" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:02.220" endtime="20211113 17:55:02.241"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:02.243" level="INFO">Clicking element 'css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn'.</msg>
+<status status="PASS" starttime="20211113 17:55:02.242" endtime="20211113 17:55:02.304"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:02.220" endtime="20211113 17:55:02.304"/>
+</kw>
+<kw name="Então deverá realizar o download do arquivo Excel" library="ResourceContratos">
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${HOME_DIR}</var>
+<arg>~</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20211113 17:55:02.306" level="INFO">${HOME_DIR} = C:\Users\Flora-Qa</msg>
+<status status="PASS" starttime="20211113 17:55:02.305" endtime="20211113 17:55:02.306"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${DOWNLOAD_DIR}</var>
+<arg>${HOME_DIR}</arg>
+<arg>DownloadS</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20211113 17:55:02.306" level="INFO">${DOWNLOAD_DIR} = C:\Users\Flora-Qa\DownloadS</msg>
+<status status="PASS" starttime="20211113 17:55:02.306" endtime="20211113 17:55:02.306"/>
+</kw>
+<kw name="List Directory" library="OperatingSystem">
+<var>@{ITEMS}</var>
+<arg>${DOWNLOAD_DIR}</arg>
+<arg>Download.Excel</arg>
+<doc>Returns and logs items in a directory, optionally filtered with ``pattern``.</doc>
+<msg timestamp="20211113 17:55:02.307" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\Flora-Qa\DownloadS"&gt;C:\Users\Flora-Qa\DownloadS&lt;/a&gt;'.</msg>
+<msg timestamp="20211113 17:55:02.309" level="INFO">0 items:
+</msg>
+<msg timestamp="20211113 17:55:02.309" level="INFO">@{ITEMS} = [ ]</msg>
+<status status="PASS" starttime="20211113 17:55:02.307" endtime="20211113 17:55:02.309"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:55:02.310" endtime="20211113 17:55:02.310"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:55:02.310" endtime="20211113 17:55:02.311"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:55:02.311" endtime="20211113 17:55:02.311"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:02.305" endtime="20211113 17:55:02.311"/>
+</kw>
+<kw name="Fechar navegador" library="ResourceContratos" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211113 17:55:02.312" endtime="20211113 17:55:04.493"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:02.312" endtime="20211113 17:55:04.493"/>
+</kw>
+<tag>AreaAdm_ContaLuz_Caso1</tag>
+<status status="PASS" starttime="20211113 17:54:47.180" endtime="20211113 17:55:04.494"/>
+</test>
+<test id="s1-t4" name="AREA ADM | CONTA DE LUZ | Caso de teste 02: Logar na área do adm, entrar em &quot;Conta de Luz&quot; e realizar pesquisa por user">
+<kw name="Abrir navegador" library="ResourceContratos" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211113 17:55:04.497" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
+<status status="PASS" starttime="20211113 17:55:04.497" endtime="20211113 17:55:08.002"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211113 17:55:08.002" endtime="20211113 17:55:08.144"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:04.496" endtime="20211113 17:55:08.145"/>
+</kw>
+<kw name="Dado que estou na pagina home" library="ResourceContratos">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211113 17:55:08.146" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
+<status status="PASS" starttime="20211113 17:55:08.146" endtime="20211113 17:55:09.797"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${VALIDAR_PAGINA}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211113 17:55:09.800" level="INFO">Page title is 'Flora Energia'.</msg>
+<status status="PASS" starttime="20211113 17:55:09.797" endtime="20211113 17:55:09.800"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:08.145" endtime="20211113 17:55:09.800"/>
+</kw>
+<kw name="E clicar no botão &quot;Entrar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:09.801" endtime="20211113 17:55:09.831"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:09.832" level="INFO">Clicking element 'css:a#login_lp'.</msg>
+<status status="PASS" starttime="20211113 17:55:09.832" endtime="20211113 17:55:10.899"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:09.800" endtime="20211113 17:55:10.900"/>
+</kw>
+<kw name="E preencher com usuario administrativo &quot;eder.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceContratos" sourcename="E preencher com usuario administrativo &quot;${EMAIL_ADM}&quot; no campo e-mail">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:10.901" endtime="20211113 17:55:10.928"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<arg>${EMAIL_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:10.929" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
+<status status="PASS" starttime="20211113 17:55:10.928" endtime="20211113 17:55:11.082"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:10.901" endtime="20211113 17:55:11.082"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:11.083" endtime="20211113 17:55:11.100"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:11.100" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:55:11.100" endtime="20211113 17:55:11.156"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:11.083" endtime="20211113 17:55:11.156"/>
+</kw>
+<kw name="E deverá inserir corretamente a senha administrativa &quot;Eder@29282726&quot;" library="ResourceContratos" sourcename="E deverá inserir corretamente a senha administrativa &quot;${SENHA_ADM}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:11.157" endtime="20211113 17:55:13.141"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>${SENHA_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:13.141" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
+<status status="PASS" starttime="20211113 17:55:13.141" endtime="20211113 17:55:13.233"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:11.156" endtime="20211113 17:55:13.233"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot; para logar na aplicação" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:13.234" endtime="20211113 17:55:13.250"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:13.251" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:55:13.250" endtime="20211113 17:55:13.286"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:13.234" endtime="20211113 17:55:13.286"/>
+</kw>
+<kw name="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;Contratos&quot;" library="ResourceContratos" sourcename="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;${CONTRATOS_HOME}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:13.287" endtime="20211113 17:55:16.602"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${CONTRATOS_HOME}</arg>
+<arg>Contratos</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20211113 17:55:16.602" endtime="20211113 17:55:16.602"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:13.287" endtime="20211113 17:55:16.602"/>
+</kw>
+<kw name="E clicar na opção &quot;Conta Luz&quot;" library="ResourceContratos">
+<kw name="Quando clicar na opção &quot;Conta Luz&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[1]/nav/a[2]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:16.604" endtime="20211113 17:55:16.636"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[1]/nav/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:16.636" level="INFO">Clicking element 'Xpath=//*[@id="root"]/div[1]/div[1]/nav/a[2]'.</msg>
+<status status="PASS" starttime="20211113 17:55:16.636" endtime="20211113 17:55:16.732"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:16.604" endtime="20211113 17:55:16.732"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:16.603" endtime="20211113 17:55:16.733"/>
+</kw>
+<kw name="E apresentar a home de &quot;Conta de Luz&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:16.734" endtime="20211113 17:55:18.493"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:16.733" endtime="20211113 17:55:18.494"/>
+</kw>
+<kw name="E descrever no campo SEARCH &quot;Munhoz&quot;" library="ResourceContratos" sourcename="E descrever no campo SEARCH &quot;${N_CONTRATO}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:div.sc-eCbnUT.fElMzr</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:18.494" endtime="20211113 17:55:18.509"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:div.sc-eCbnUT.fElMzr</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:18.510" level="INFO">Clicking element 'css:div.sc-eCbnUT.fElMzr'.</msg>
+<status status="PASS" starttime="20211113 17:55:18.509" endtime="20211113 17:55:18.580"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input.sc-iBzEeX.glZmJR</arg>
+<arg>${N_CONTRATO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:18.580" level="INFO">Typing text 'Munhoz' into text field 'css:input.sc-iBzEeX.glZmJR'.</msg>
+<status status="PASS" starttime="20211113 17:55:18.580" endtime="20211113 17:55:18.669"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:18.494" endtime="20211113 17:55:18.669"/>
+</kw>
+<kw name="Quando eu clicar no botão &quot;Search&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div[1]/div/div/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:18.670" endtime="20211113 17:55:18.690"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div[1]/div/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:18.690" level="INFO">Clicking element 'xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20211113 17:55:18.690" endtime="20211113 17:55:18.760"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211113 17:55:26.768" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20211113 17:55:18.761" endtime="20211113 17:55:26.768"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:18.670" endtime="20211113 17:55:26.768"/>
+</kw>
+<kw name="Então deverá realizar buscar informações retornando o valor pesquisado &quot;4657&quot; conta luz" library="ResourceContratos" sourcename="Então deverá realizar buscar informações retornando o valor pesquisado ${N_VALOR_LUZ}&quot; conta luz">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div[3]/table/tbody/tr[1]/td[2]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:26.769" endtime="20211113 17:55:26.789"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211113 17:55:26.912" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-67.png"&gt;&lt;img src="selenium-screenshot-67.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211113 17:55:26.789" endtime="20211113 17:55:26.912"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:26.769" endtime="20211113 17:55:26.913"/>
+</kw>
+<kw name="Fechar navegador" library="ResourceContratos" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211113 17:55:26.914" endtime="20211113 17:55:29.089"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:26.913" endtime="20211113 17:55:29.089"/>
+</kw>
+<tag>AreaAdm_ContaLuz_Caso2</tag>
+<status status="PASS" starttime="20211113 17:55:04.496" endtime="20211113 17:55:29.090"/>
+</test>
+<test id="s1-t5" name="AREA ADM | REFINO PROPOSTA | Caso de teste 01: Logar na área do adm, entrar em &quot;Refino propostas&quot; e clicar &quot;Download All&quot; excel">
+<kw name="Abrir navegador" library="ResourceContratos" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211113 17:55:29.092" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
+<status status="PASS" starttime="20211113 17:55:29.092" endtime="20211113 17:55:32.724"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211113 17:55:32.724" endtime="20211113 17:55:32.906"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:29.091" endtime="20211113 17:55:32.906"/>
+</kw>
+<kw name="Dado que estou na pagina home" library="ResourceContratos">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211113 17:55:32.907" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
+<status status="PASS" starttime="20211113 17:55:32.907" endtime="20211113 17:55:34.313"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${VALIDAR_PAGINA}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211113 17:55:34.317" level="INFO">Page title is 'Flora Energia'.</msg>
+<status status="PASS" starttime="20211113 17:55:34.313" endtime="20211113 17:55:34.317"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:32.906" endtime="20211113 17:55:34.317"/>
+</kw>
+<kw name="E clicar no botão &quot;Entrar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:34.320" endtime="20211113 17:55:34.348"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:34.348" level="INFO">Clicking element 'css:a#login_lp'.</msg>
+<status status="PASS" starttime="20211113 17:55:34.348" endtime="20211113 17:55:36.209"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:34.319" endtime="20211113 17:55:36.209"/>
+</kw>
+<kw name="E preencher com usuario administrativo &quot;eder.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceContratos" sourcename="E preencher com usuario administrativo &quot;${EMAIL_ADM}&quot; no campo e-mail">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:36.211" endtime="20211113 17:55:36.242"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<arg>${EMAIL_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:36.243" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
+<status status="PASS" starttime="20211113 17:55:36.242" endtime="20211113 17:55:36.409"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:36.210" endtime="20211113 17:55:36.409"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:36.411" endtime="20211113 17:55:36.432"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:36.432" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:55:36.432" endtime="20211113 17:55:36.489"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:36.410" endtime="20211113 17:55:36.489"/>
+</kw>
+<kw name="E deverá inserir corretamente a senha administrativa &quot;Eder@29282726&quot;" library="ResourceContratos" sourcename="E deverá inserir corretamente a senha administrativa &quot;${SENHA_ADM}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:36.496" endtime="20211113 17:55:37.626"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>${SENHA_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:37.627" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
+<status status="PASS" starttime="20211113 17:55:37.626" endtime="20211113 17:55:37.712"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:36.495" endtime="20211113 17:55:37.712"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot; para logar na aplicação" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:37.713" endtime="20211113 17:55:37.730"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:37.730" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:55:37.730" endtime="20211113 17:55:37.766"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:37.712" endtime="20211113 17:55:37.766"/>
+</kw>
+<kw name="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;Contratos&quot;" library="ResourceContratos" sourcename="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;${CONTRATOS_HOME}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:37.767" endtime="20211113 17:55:40.958"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${CONTRATOS_HOME}</arg>
+<arg>Contratos</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20211113 17:55:40.958" endtime="20211113 17:55:40.958"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:37.766" endtime="20211113 17:55:40.958"/>
+</kw>
+<kw name="Quando clicar na opção &quot;Refino Propostas&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[1]/nav/a[3]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:40.959" endtime="20211113 17:55:40.991"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[1]/nav/a[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:40.991" level="INFO">Clicking element 'Xpath=//*[@id="root"]/div[1]/div[1]/nav/a[3]'.</msg>
+<status status="PASS" starttime="20211113 17:55:40.991" endtime="20211113 17:55:41.108"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:40.959" endtime="20211113 17:55:41.108"/>
+</kw>
+<kw name="E apresentar a home de &quot;Refino Propostas&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:41.110" endtime="20211113 17:55:42.958"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:42.958" level="INFO">Clicking element 'css:h1.sc-jffHpj.lLwQZ'.</msg>
+<status status="PASS" starttime="20211113 17:55:42.958" endtime="20211113 17:55:43.019"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:41.109" endtime="20211113 17:55:43.019"/>
+</kw>
+<kw name="E clicar no botão &quot;Dowload All&quot; da Refino Propostas" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:43.020" endtime="20211113 17:55:43.044"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:43.051" level="INFO">Clicking element 'css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn'.</msg>
+<status status="PASS" starttime="20211113 17:55:43.046" endtime="20211113 17:55:43.212"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:43.020" endtime="20211113 17:55:43.212"/>
+</kw>
+<kw name="Então deverá realizar o download do arquivo Excel" library="ResourceContratos">
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${HOME_DIR}</var>
+<arg>~</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20211113 17:55:43.213" level="INFO">${HOME_DIR} = C:\Users\Flora-Qa</msg>
+<status status="PASS" starttime="20211113 17:55:43.213" endtime="20211113 17:55:43.213"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${DOWNLOAD_DIR}</var>
+<arg>${HOME_DIR}</arg>
+<arg>DownloadS</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20211113 17:55:43.214" level="INFO">${DOWNLOAD_DIR} = C:\Users\Flora-Qa\DownloadS</msg>
+<status status="PASS" starttime="20211113 17:55:43.214" endtime="20211113 17:55:43.214"/>
+</kw>
+<kw name="List Directory" library="OperatingSystem">
+<var>@{ITEMS}</var>
+<arg>${DOWNLOAD_DIR}</arg>
+<arg>Download.Excel</arg>
+<doc>Returns and logs items in a directory, optionally filtered with ``pattern``.</doc>
+<msg timestamp="20211113 17:55:43.214" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\Flora-Qa\DownloadS"&gt;C:\Users\Flora-Qa\DownloadS&lt;/a&gt;'.</msg>
+<msg timestamp="20211113 17:55:43.215" level="INFO">0 items:
+</msg>
+<msg timestamp="20211113 17:55:43.215" level="INFO">@{ITEMS} = [ ]</msg>
+<status status="PASS" starttime="20211113 17:55:43.214" endtime="20211113 17:55:43.215"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:55:43.215" endtime="20211113 17:55:43.216"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:55:43.216" endtime="20211113 17:55:43.217"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:55:43.218" endtime="20211113 17:55:43.219"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:43.213" endtime="20211113 17:55:43.219"/>
+</kw>
+<kw name="Fechar navegador" library="ResourceContratos" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211113 17:55:43.220" endtime="20211113 17:55:45.390"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:43.220" endtime="20211113 17:55:45.390"/>
+</kw>
+<tag>AreaAdm_RefinoPropostas_Caso1</tag>
+<status status="PASS" starttime="20211113 17:55:29.091" endtime="20211113 17:55:45.391"/>
+</test>
+<test id="s1-t6" name="AREA ADM | CONTA DE LUZ | Caso de teste 02: Logar na área do adm, entrar em &quot;Refino Propostas&quot; realizar pesquisa por usário">
+<kw name="Abrir navegador" library="ResourceContratos" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211113 17:55:45.393" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
+<status status="PASS" starttime="20211113 17:55:45.393" endtime="20211113 17:55:48.858"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211113 17:55:48.858" endtime="20211113 17:55:48.989"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:45.393" endtime="20211113 17:55:48.989"/>
+</kw>
+<kw name="Dado que estou na pagina home" library="ResourceContratos">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211113 17:55:48.990" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
+<status status="PASS" starttime="20211113 17:55:48.990" endtime="20211113 17:55:50.431"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${VALIDAR_PAGINA}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211113 17:55:50.435" level="INFO">Page title is 'Flora Energia'.</msg>
+<status status="PASS" starttime="20211113 17:55:50.431" endtime="20211113 17:55:50.435"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:48.990" endtime="20211113 17:55:50.435"/>
+</kw>
+<kw name="E clicar no botão &quot;Entrar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:50.436" endtime="20211113 17:55:50.459"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:50.459" level="INFO">Clicking element 'css:a#login_lp'.</msg>
+<status status="PASS" starttime="20211113 17:55:50.459" endtime="20211113 17:55:51.968"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:50.435" endtime="20211113 17:55:51.968"/>
+</kw>
+<kw name="E preencher com usuario administrativo &quot;eder.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceContratos" sourcename="E preencher com usuario administrativo &quot;${EMAIL_ADM}&quot; no campo e-mail">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:51.969" endtime="20211113 17:55:51.992"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<arg>${EMAIL_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:51.993" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
+<status status="PASS" starttime="20211113 17:55:51.992" endtime="20211113 17:55:52.164"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:51.969" endtime="20211113 17:55:52.164"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:52.165" endtime="20211113 17:55:52.183"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:52.184" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:55:52.183" endtime="20211113 17:55:52.247"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:52.165" endtime="20211113 17:55:52.247"/>
+</kw>
+<kw name="E deverá inserir corretamente a senha administrativa &quot;Eder@29282726&quot;" library="ResourceContratos" sourcename="E deverá inserir corretamente a senha administrativa &quot;${SENHA_ADM}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:52.248" endtime="20211113 17:55:53.208"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>${SENHA_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:53.209" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
+<status status="PASS" starttime="20211113 17:55:53.208" endtime="20211113 17:55:53.305"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:52.248" endtime="20211113 17:55:53.305"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot; para logar na aplicação" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:53.306" endtime="20211113 17:55:53.323"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:55:53.324" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:55:53.324" endtime="20211113 17:55:53.371"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:53.305" endtime="20211113 17:55:53.371"/>
+</kw>
+<kw name="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;Contratos&quot;" library="ResourceContratos" sourcename="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;${CONTRATOS_HOME}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:55:53.372" endtime="20211113 17:55:57.114"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${CONTRATOS_HOME}</arg>
+<arg>Contratos</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20211113 17:55:57.114" endtime="20211113 17:55:57.115"/>
+</kw>
+<status status="PASS" starttime="20211113 17:55:53.371" endtime="20211113 17:55:57.115"/>
 </kw>
 <kw name="E clicar na opção &quot;Refino Propostas&quot;" library="ResourceContratos">
 <kw name="Quando clicar na opção &quot;Refino Propostas&quot;" library="ResourceContratos">
@@ -126,90 +1131,1471 @@
 <arg>Xpath=//*[@id="root"]/div[1]/div[1]/nav/a[3]</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211112 21:53:42.721" endtime="20211112 21:53:42.749"/>
+<status status="PASS" starttime="20211113 17:55:57.117" endtime="20211113 17:55:57.142"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>Xpath=//*[@id="root"]/div[1]/div[1]/nav/a[3]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211112 21:53:42.749" level="INFO">Clicking element 'Xpath=//*[@id="root"]/div[1]/div[1]/nav/a[3]'.</msg>
-<status status="PASS" starttime="20211112 21:53:42.749" endtime="20211112 21:53:42.851"/>
+<msg timestamp="20211113 17:55:57.142" level="INFO">Clicking element 'Xpath=//*[@id="root"]/div[1]/div[1]/nav/a[3]'.</msg>
+<status status="PASS" starttime="20211113 17:55:57.142" endtime="20211113 17:55:57.241"/>
 </kw>
-<status status="PASS" starttime="20211112 21:53:42.721" endtime="20211112 21:53:42.851"/>
+<status status="PASS" starttime="20211113 17:55:57.116" endtime="20211113 17:55:57.242"/>
 </kw>
-<status status="PASS" starttime="20211112 21:53:42.721" endtime="20211112 21:53:42.851"/>
+<status status="PASS" starttime="20211113 17:55:57.115" endtime="20211113 17:55:57.242"/>
 </kw>
 <kw name="E apresentar a home de &quot;Refino Propostas&quot;" library="ResourceContratos">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:h1.sc-jffHpj.lLwQZ</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211112 21:53:42.852" endtime="20211112 21:53:45.647"/>
+<status status="PASS" starttime="20211113 17:55:57.243" endtime="20211113 17:55:58.952"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:h1.sc-jffHpj.lLwQZ</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211112 21:53:45.647" level="INFO">Clicking element 'css:h1.sc-jffHpj.lLwQZ'.</msg>
-<status status="PASS" starttime="20211112 21:53:45.647" endtime="20211112 21:53:45.694"/>
+<msg timestamp="20211113 17:55:58.952" level="INFO">Clicking element 'css:h1.sc-jffHpj.lLwQZ'.</msg>
+<status status="PASS" starttime="20211113 17:55:58.952" endtime="20211113 17:55:59.036"/>
 </kw>
-<status status="PASS" starttime="20211112 21:53:42.852" endtime="20211112 21:53:45.695"/>
+<status status="PASS" starttime="20211113 17:55:57.242" endtime="20211113 17:55:59.036"/>
 </kw>
 <kw name="E descrever no campo SEARCH &quot;102&quot;" library="ResourceContratos" sourcename="E descrever no campo SEARCH &quot;${N_CONTRATO}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css:div.sc-eCbnUT.fElMzr</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211112 21:53:45.696" endtime="20211112 21:53:45.719"/>
+<status status="PASS" starttime="20211113 17:55:59.037" endtime="20211113 17:55:59.090"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:div.sc-eCbnUT.fElMzr</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211112 21:53:45.719" level="INFO">Clicking element 'css:div.sc-eCbnUT.fElMzr'.</msg>
-<status status="PASS" starttime="20211112 21:53:45.719" endtime="20211112 21:53:45.761"/>
+<msg timestamp="20211113 17:55:59.091" level="INFO">Clicking element 'css:div.sc-eCbnUT.fElMzr'.</msg>
+<status status="PASS" starttime="20211113 17:55:59.091" endtime="20211113 17:55:59.141"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>css:input.sc-iBzEeX.glZmJR</arg>
 <arg>${N_CONTRATO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211112 21:53:45.761" level="INFO">Typing text '102' into text field 'css:input.sc-iBzEeX.glZmJR'.</msg>
-<status status="PASS" starttime="20211112 21:53:45.761" endtime="20211112 21:53:45.856"/>
+<msg timestamp="20211113 17:55:59.142" level="INFO">Typing text '102' into text field 'css:input.sc-iBzEeX.glZmJR'.</msg>
+<status status="PASS" starttime="20211113 17:55:59.141" endtime="20211113 17:55:59.270"/>
 </kw>
-<status status="PASS" starttime="20211112 21:53:45.695" endtime="20211112 21:53:45.856"/>
+<status status="PASS" starttime="20211113 17:55:59.036" endtime="20211113 17:55:59.270"/>
 </kw>
 <kw name="Quando eu clicar no botão &quot;Search&quot;" library="ResourceContratos">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div[1]/div/div/button</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20211112 21:53:45.857" endtime="20211112 21:53:45.885"/>
+<status status="PASS" starttime="20211113 17:55:59.271" endtime="20211113 17:55:59.305"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div[1]/div/div/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20211112 21:53:45.885" level="INFO">Clicking element 'xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div[1]/div/div/button'.</msg>
-<status status="PASS" starttime="20211112 21:53:45.885" endtime="20211112 21:53:46.010"/>
+<msg timestamp="20211113 17:55:59.305" level="INFO">Clicking element 'xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20211113 17:55:59.305" endtime="20211113 17:55:59.440"/>
 </kw>
-<status status="PASS" starttime="20211112 21:53:45.856" endtime="20211112 21:53:46.010"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211113 17:56:07.447" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20211113 17:55:59.440" endtime="20211113 17:56:07.447"/>
 </kw>
-<kw name="Então deverá realizar buscar informações retornando o valor pesquisado &quot;102&quot; Refino Propostas">
-<msg timestamp="20211112 21:53:46.020" level="FAIL">No keyword with name 'Então deverá realizar buscar informações retornando o valor pesquisado "102" Refino Propostas' found. Did you mean:
-    ResourceContratos.Então Deverá Realizar Buscar Informações Retornando O Valor Pesquisado "${N VALOR REFINO}"" Refino Propostas</msg>
-<status status="FAIL" starttime="20211112 21:53:46.019" endtime="20211112 21:53:46.020"/>
+<status status="PASS" starttime="20211113 17:55:59.271" endtime="20211113 17:56:07.447"/>
+</kw>
+<kw name="Então deverá realizar buscar informações retornando o valor pesquisado &quot;102&quot; Refino Propostas" library="ResourceContratos" sourcename="Então deverá realizar buscar informações retornando o valor pesquisado &quot;${N_VALOR_REFINO}&quot; Refino Propostas">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div[3]/table/tbody/tr[2]/td[1]/a</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:56:07.460" level="INFO">Current page contains element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div[3]/table/tbody/tr[2]/td[1]/a'.</msg>
+<status status="PASS" starttime="20211113 17:56:07.449" endtime="20211113 17:56:07.460"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211113 17:56:07.585" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-68.png"&gt;&lt;img src="selenium-screenshot-68.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211113 17:56:07.461" endtime="20211113 17:56:07.585"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:07.448" endtime="20211113 17:56:07.585"/>
+</kw>
+<kw name="Fechar navegador" library="ResourceContratos" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211113 17:56:07.586" endtime="20211113 17:56:09.790"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:07.586" endtime="20211113 17:56:09.790"/>
 </kw>
 <tag>AreaAdm_RefinoPropostas_Caso2</tag>
-<status status="FAIL" starttime="20211112 21:53:28.387" endtime="20211112 21:53:46.020">No keyword with name 'Então deverá realizar buscar informações retornando o valor pesquisado "102" Refino Propostas' found. Did you mean:
-    ResourceContratos.Então Deverá Realizar Buscar Informações Retornando O Valor Pesquisado "${N VALOR REFINO}"" Refino Propostas</status>
+<status status="PASS" starttime="20211113 17:55:45.392" endtime="20211113 17:56:09.791"/>
 </test>
-<status status="FAIL" starttime="20211112 21:53:28.009" endtime="20211112 21:53:46.022"/>
-</suite>
-<status status="FAIL" starttime="20211112 21:53:27.995" endtime="20211112 21:53:46.023"/>
+<test id="s1-t7" name="AREA ADM | SET UP CPFL PAULISTA | Caso de teste 01: Logar na área do adm, entrar em &quot;Set Up CPFL Paulista&quot; realizar pesquisa por stauts.">
+<kw name="Abrir navegador" library="ResourceContratos" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211113 17:56:09.794" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
+<status status="PASS" starttime="20211113 17:56:09.793" endtime="20211113 17:56:13.536"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211113 17:56:13.537" endtime="20211113 17:56:13.660"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:09.793" endtime="20211113 17:56:13.660"/>
+</kw>
+<kw name="Dado que estou na pagina home" library="ResourceContratos">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211113 17:56:13.661" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
+<status status="PASS" starttime="20211113 17:56:13.661" endtime="20211113 17:56:15.140"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${VALIDAR_PAGINA}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211113 17:56:15.145" level="INFO">Page title is 'Flora Energia'.</msg>
+<status status="PASS" starttime="20211113 17:56:15.140" endtime="20211113 17:56:15.145"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:13.661" endtime="20211113 17:56:15.146"/>
+</kw>
+<kw name="E clicar no botão &quot;Entrar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:15.147" endtime="20211113 17:56:15.173"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:15.174" level="INFO">Clicking element 'css:a#login_lp'.</msg>
+<status status="PASS" starttime="20211113 17:56:15.174" endtime="20211113 17:56:16.285"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:15.146" endtime="20211113 17:56:16.286"/>
+</kw>
+<kw name="E preencher com usuario administrativo &quot;eder.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceContratos" sourcename="E preencher com usuario administrativo &quot;${EMAIL_ADM}&quot; no campo e-mail">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:16.286" endtime="20211113 17:56:16.313"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<arg>${EMAIL_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:16.314" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
+<status status="PASS" starttime="20211113 17:56:16.313" endtime="20211113 17:56:16.485"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:16.286" endtime="20211113 17:56:16.485"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:16.487" endtime="20211113 17:56:16.507"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:16.507" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:56:16.507" endtime="20211113 17:56:16.570"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:16.486" endtime="20211113 17:56:16.570"/>
+</kw>
+<kw name="E deverá inserir corretamente a senha administrativa &quot;Eder@29282726&quot;" library="ResourceContratos" sourcename="E deverá inserir corretamente a senha administrativa &quot;${SENHA_ADM}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:16.570" endtime="20211113 17:56:17.287"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>${SENHA_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:17.288" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
+<status status="PASS" starttime="20211113 17:56:17.287" endtime="20211113 17:56:17.383"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:16.570" endtime="20211113 17:56:17.383"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot; para logar na aplicação" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:17.384" endtime="20211113 17:56:17.402"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:17.402" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:56:17.402" endtime="20211113 17:56:17.439"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:17.384" endtime="20211113 17:56:17.439"/>
+</kw>
+<kw name="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;Contratos&quot;" library="ResourceContratos" sourcename="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;${CONTRATOS_HOME}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:17.440" endtime="20211113 17:56:20.890"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${CONTRATOS_HOME}</arg>
+<arg>Contratos</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20211113 17:56:20.890" endtime="20211113 17:56:20.891"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:17.439" endtime="20211113 17:56:20.891"/>
+</kw>
+<kw name="E clicar na opção &quot;Set Up Paulista&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:20.892" endtime="20211113 17:56:20.912"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:56:20.924" level="INFO">Current page contains element 'css:a.nav-item[href="/set-up-cpfl"]'.</msg>
+<status status="PASS" starttime="20211113 17:56:20.912" endtime="20211113 17:56:20.924"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:20.924" level="INFO">Clicking element 'css:a.nav-item[href="/set-up-cpfl"]'.</msg>
+<status status="PASS" starttime="20211113 17:56:20.924" endtime="20211113 17:56:21.028"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:20.891" endtime="20211113 17:56:21.029"/>
+</kw>
+<kw name="E apresentar a home de &quot;Set Up Paulista&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:21.031" endtime="20211113 17:56:25.617"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:21.030" endtime="20211113 17:56:25.617"/>
+</kw>
+<kw name="E descrever no campo SEARCH &quot;Aguardando Ativação&quot;" library="ResourceContratos" sourcename="E descrever no campo SEARCH &quot;${N_CONTRATO}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:div.sc-eCbnUT.fElMzr</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:25.618" endtime="20211113 17:56:25.636"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:div.sc-eCbnUT.fElMzr</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:25.637" level="INFO">Clicking element 'css:div.sc-eCbnUT.fElMzr'.</msg>
+<status status="PASS" starttime="20211113 17:56:25.637" endtime="20211113 17:56:25.822"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input.sc-iBzEeX.glZmJR</arg>
+<arg>${N_CONTRATO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:25.823" level="INFO">Typing text 'Aguardando Ativação' into text field 'css:input.sc-iBzEeX.glZmJR'.</msg>
+<status status="PASS" starttime="20211113 17:56:25.822" endtime="20211113 17:56:26.252"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:25.618" endtime="20211113 17:56:26.252"/>
+</kw>
+<kw name="Quando eu clicar no botão &quot;Search&quot; Set Up CPFL" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div/div[1]/div/div/div/div[1]/div/div/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:26.253" endtime="20211113 17:56:26.287"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div/div[1]/div/div/div/div[1]/div/div/button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:56:26.299" level="INFO">Current page contains element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div/div[1]/div/div/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20211113 17:56:26.287" endtime="20211113 17:56:26.299"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div/div[1]/div/div/div/div[1]/div/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:26.299" level="INFO">Clicking element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div/div[1]/div/div/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20211113 17:56:26.299" endtime="20211113 17:56:26.587"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211113 17:56:34.596" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20211113 17:56:26.587" endtime="20211113 17:56:34.596"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:26.253" endtime="20211113 17:56:34.596"/>
+</kw>
+<kw name="Então deverá apresentar status de &quot;Aguardando Ativação&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div/div[1]/div/div/div/div[3]/table/tbody/tr[1]/td[6]/span</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:34.597" endtime="20211113 17:56:34.626"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div/div[1]/div/div/div/div[3]/table/tbody/tr[1]/td[6]/span</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:56:34.641" level="INFO">Current page contains element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div/div[1]/div/div/div/div[3]/table/tbody/tr[1]/td[6]/span'.</msg>
+<status status="PASS" starttime="20211113 17:56:34.626" endtime="20211113 17:56:34.641"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211113 17:56:34.793" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-69.png"&gt;&lt;img src="selenium-screenshot-69.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211113 17:56:34.641" endtime="20211113 17:56:34.793"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:34.597" endtime="20211113 17:56:34.793"/>
+</kw>
+<kw name="Fechar navegador" library="ResourceContratos" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211113 17:56:34.795" endtime="20211113 17:56:36.963"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:34.794" endtime="20211113 17:56:36.963"/>
+</kw>
+<tag>AreaAdm_SetUpCPFL_Caso1</tag>
+<status status="PASS" starttime="20211113 17:56:09.792" endtime="20211113 17:56:36.964"/>
+</test>
+<test id="s1-t8" name="AREA ADM | SET UP CPFL PAULISTA | Caso de teste 02: Logar na área do adm, entrar em &quot;Set Up CPFL Paulista&quot; e clicar &quot;Download All&quot; excel.">
+<kw name="Abrir navegador" library="ResourceContratos" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211113 17:56:36.967" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
+<status status="PASS" starttime="20211113 17:56:36.966" endtime="20211113 17:56:40.591"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211113 17:56:40.591" endtime="20211113 17:56:40.762"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:36.966" endtime="20211113 17:56:40.762"/>
+</kw>
+<kw name="Dado que estou na pagina home" library="ResourceContratos">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211113 17:56:40.763" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
+<status status="PASS" starttime="20211113 17:56:40.763" endtime="20211113 17:56:42.111"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${VALIDAR_PAGINA}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211113 17:56:42.117" level="INFO">Page title is 'Flora Energia'.</msg>
+<status status="PASS" starttime="20211113 17:56:42.111" endtime="20211113 17:56:42.117"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:40.762" endtime="20211113 17:56:42.117"/>
+</kw>
+<kw name="E clicar no botão &quot;Entrar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:42.119" endtime="20211113 17:56:42.149"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:42.149" level="INFO">Clicking element 'css:a#login_lp'.</msg>
+<status status="PASS" starttime="20211113 17:56:42.149" endtime="20211113 17:56:43.271"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:42.118" endtime="20211113 17:56:43.272"/>
+</kw>
+<kw name="E preencher com usuario administrativo &quot;eder.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceContratos" sourcename="E preencher com usuario administrativo &quot;${EMAIL_ADM}&quot; no campo e-mail">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:43.272" endtime="20211113 17:56:43.298"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<arg>${EMAIL_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:43.299" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
+<status status="PASS" starttime="20211113 17:56:43.298" endtime="20211113 17:56:43.444"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:43.272" endtime="20211113 17:56:43.445"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:43.445" endtime="20211113 17:56:43.462"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:43.462" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:56:43.462" endtime="20211113 17:56:43.520"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:43.445" endtime="20211113 17:56:43.521"/>
+</kw>
+<kw name="E deverá inserir corretamente a senha administrativa &quot;Eder@29282726&quot;" library="ResourceContratos" sourcename="E deverá inserir corretamente a senha administrativa &quot;${SENHA_ADM}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:43.524" endtime="20211113 17:56:44.207"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>${SENHA_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:44.208" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
+<status status="PASS" starttime="20211113 17:56:44.207" endtime="20211113 17:56:44.325"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:43.523" endtime="20211113 17:56:44.326"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot; para logar na aplicação" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:44.326" endtime="20211113 17:56:44.341"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:44.342" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:56:44.341" endtime="20211113 17:56:44.370"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:44.326" endtime="20211113 17:56:44.370"/>
+</kw>
+<kw name="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;Contratos&quot;" library="ResourceContratos" sourcename="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;${CONTRATOS_HOME}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:44.371" endtime="20211113 17:56:47.750"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${CONTRATOS_HOME}</arg>
+<arg>Contratos</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20211113 17:56:47.750" endtime="20211113 17:56:47.751"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:44.371" endtime="20211113 17:56:47.751"/>
+</kw>
+<kw name="Quando clicar na opção &quot;Set Up Paulista&quot;" library="ResourceContratos">
+<kw name="E clicar na opção &quot;Set Up Paulista&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:47.752" endtime="20211113 17:56:47.786"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:56:47.793" level="INFO">Current page contains element 'css:a.nav-item[href="/set-up-cpfl"]'.</msg>
+<status status="PASS" starttime="20211113 17:56:47.786" endtime="20211113 17:56:47.793"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:47.793" level="INFO">Clicking element 'css:a.nav-item[href="/set-up-cpfl"]'.</msg>
+<status status="PASS" starttime="20211113 17:56:47.793" endtime="20211113 17:56:47.879"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:47.751" endtime="20211113 17:56:47.880"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:47.751" endtime="20211113 17:56:47.880"/>
+</kw>
+<kw name="E apresentar a home de &quot;Set Up Paulista&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:47.882" endtime="20211113 17:56:52.484"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:47.882" endtime="20211113 17:56:52.484"/>
+</kw>
+<kw name="E clicar no botão &quot;Dowload All&quot; da Set Up CPFL" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:56:52.485" endtime="20211113 17:56:52.500"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:56:52.508" level="INFO">Current page contains element 'css:a.nav-item[href="/set-up-cpfl"]'.</msg>
+<status status="PASS" starttime="20211113 17:56:52.500" endtime="20211113 17:56:52.508"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:span.MuiIconButton-label</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:56:52.508" level="INFO">Clicking element 'css:span.MuiIconButton-label'.</msg>
+<status status="PASS" starttime="20211113 17:56:52.508" endtime="20211113 17:56:52.826"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211113 17:57:00.826" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20211113 17:56:52.826" endtime="20211113 17:57:00.826"/>
+</kw>
+<status status="PASS" starttime="20211113 17:56:52.484" endtime="20211113 17:57:00.826"/>
+</kw>
+<kw name="Então deverá realizar o download do arquivo Excel" library="ResourceContratos">
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${HOME_DIR}</var>
+<arg>~</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20211113 17:57:00.828" level="INFO">${HOME_DIR} = C:\Users\Flora-Qa</msg>
+<status status="PASS" starttime="20211113 17:57:00.827" endtime="20211113 17:57:00.828"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${DOWNLOAD_DIR}</var>
+<arg>${HOME_DIR}</arg>
+<arg>DownloadS</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20211113 17:57:00.828" level="INFO">${DOWNLOAD_DIR} = C:\Users\Flora-Qa\DownloadS</msg>
+<status status="PASS" starttime="20211113 17:57:00.828" endtime="20211113 17:57:00.828"/>
+</kw>
+<kw name="List Directory" library="OperatingSystem">
+<var>@{ITEMS}</var>
+<arg>${DOWNLOAD_DIR}</arg>
+<arg>Download.Excel</arg>
+<doc>Returns and logs items in a directory, optionally filtered with ``pattern``.</doc>
+<msg timestamp="20211113 17:57:00.828" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\Flora-Qa\DownloadS"&gt;C:\Users\Flora-Qa\DownloadS&lt;/a&gt;'.</msg>
+<msg timestamp="20211113 17:57:00.828" level="INFO">0 items:
+</msg>
+<msg timestamp="20211113 17:57:00.829" level="INFO">@{ITEMS} = [ ]</msg>
+<status status="PASS" starttime="20211113 17:57:00.828" endtime="20211113 17:57:00.829"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:57:00.829" endtime="20211113 17:57:00.829"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:57:00.829" endtime="20211113 17:57:00.830"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:57:00.830" endtime="20211113 17:57:00.830"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:00.827" endtime="20211113 17:57:00.830"/>
+</kw>
+<kw name="Fechar navegador" library="ResourceContratos" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211113 17:57:00.831" endtime="20211113 17:57:03.021"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:00.831" endtime="20211113 17:57:03.021"/>
+</kw>
+<tag>AreaAdm_SetUpCPFL_Caso2</tag>
+<status status="PASS" starttime="20211113 17:56:36.965" endtime="20211113 17:57:03.022"/>
+</test>
+<test id="s1-t9" name="AREA ADM | SET UP CPFL PAULISTA | Caso de teste 03: Logar na área do adm, entrar em &quot;Set Up CPFL Paulista&quot;, clicar &quot;Baixar modelo&quot; e clicar &quot;Download All&quot; excel.">
+<kw name="Abrir navegador" library="ResourceContratos" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211113 17:57:03.024" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
+<status status="PASS" starttime="20211113 17:57:03.024" endtime="20211113 17:57:06.479"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211113 17:57:06.479" endtime="20211113 17:57:06.600"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:03.023" endtime="20211113 17:57:06.600"/>
+</kw>
+<kw name="Dado que estou na pagina home" library="ResourceContratos">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211113 17:57:06.601" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
+<status status="PASS" starttime="20211113 17:57:06.601" endtime="20211113 17:57:08.031"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${VALIDAR_PAGINA}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211113 17:57:08.036" level="INFO">Page title is 'Flora Energia'.</msg>
+<status status="PASS" starttime="20211113 17:57:08.031" endtime="20211113 17:57:08.036"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:06.600" endtime="20211113 17:57:08.037"/>
+</kw>
+<kw name="E clicar no botão &quot;Entrar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:08.038" endtime="20211113 17:57:08.064"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:08.065" level="INFO">Clicking element 'css:a#login_lp'.</msg>
+<status status="PASS" starttime="20211113 17:57:08.065" endtime="20211113 17:57:09.212"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:08.037" endtime="20211113 17:57:09.212"/>
+</kw>
+<kw name="E preencher com usuario administrativo &quot;eder.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceContratos" sourcename="E preencher com usuario administrativo &quot;${EMAIL_ADM}&quot; no campo e-mail">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:09.213" endtime="20211113 17:57:09.237"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<arg>${EMAIL_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:09.237" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
+<status status="PASS" starttime="20211113 17:57:09.237" endtime="20211113 17:57:09.394"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:09.213" endtime="20211113 17:57:09.394"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:09.395" endtime="20211113 17:57:09.414"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:09.416" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:57:09.414" endtime="20211113 17:57:09.462"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:09.394" endtime="20211113 17:57:09.462"/>
+</kw>
+<kw name="E deverá inserir corretamente a senha administrativa &quot;Eder@29282726&quot;" library="ResourceContratos" sourcename="E deverá inserir corretamente a senha administrativa &quot;${SENHA_ADM}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:09.463" endtime="20211113 17:57:10.581"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>${SENHA_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:10.582" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
+<status status="PASS" starttime="20211113 17:57:10.581" endtime="20211113 17:57:10.676"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:09.462" endtime="20211113 17:57:10.676"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot; para logar na aplicação" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:10.677" endtime="20211113 17:57:10.693"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:10.694" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:57:10.693" endtime="20211113 17:57:10.738"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:10.677" endtime="20211113 17:57:10.738"/>
+</kw>
+<kw name="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;Contratos&quot;" library="ResourceContratos" sourcename="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;${CONTRATOS_HOME}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:10.739" endtime="20211113 17:57:14.588"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${CONTRATOS_HOME}</arg>
+<arg>Contratos</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20211113 17:57:14.588" endtime="20211113 17:57:14.589"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:10.738" endtime="20211113 17:57:14.589"/>
+</kw>
+<kw name="E clicar na opção &quot;Set Up Paulista&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:14.590" endtime="20211113 17:57:14.609"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:57:14.615" level="INFO">Current page contains element 'css:a.nav-item[href="/set-up-cpfl"]'.</msg>
+<status status="PASS" starttime="20211113 17:57:14.609" endtime="20211113 17:57:14.615"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:14.615" level="INFO">Clicking element 'css:a.nav-item[href="/set-up-cpfl"]'.</msg>
+<status status="PASS" starttime="20211113 17:57:14.615" endtime="20211113 17:57:14.708"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:14.590" endtime="20211113 17:57:14.708"/>
+</kw>
+<kw name="E apresentar a home de &quot;Set Up Paulista&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:14.710" endtime="20211113 17:57:19.160"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:14.709" endtime="20211113 17:57:19.161"/>
+</kw>
+<kw name="Quando clicar no botão &quot;Baixar Modelo&quot; da Set Up CPFL" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.sc-fXazdy.dRymUt</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:19.162" endtime="20211113 17:57:19.184"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:button.sc-fXazdy.dRymUt</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:57:19.194" level="INFO">Current page contains element 'css:button.sc-fXazdy.dRymUt'.</msg>
+<status status="PASS" starttime="20211113 17:57:19.185" endtime="20211113 17:57:19.194"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.sc-fXazdy.dRymUt</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:19.194" level="INFO">Clicking element 'css:button.sc-fXazdy.dRymUt'.</msg>
+<status status="PASS" starttime="20211113 17:57:19.194" endtime="20211113 17:57:19.530"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:19.161" endtime="20211113 17:57:19.530"/>
+</kw>
+<kw name="E apresentar a home de &quot;Ativação em massa&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:19.531" endtime="20211113 17:57:21.594"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:57:21.599" level="INFO">Current page contains element 'css:h1.sc-jffHpj.lLwQZ'.</msg>
+<status status="PASS" starttime="20211113 17:57:21.594" endtime="20211113 17:57:21.600"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:19.531" endtime="20211113 17:57:21.600"/>
+</kw>
+<kw name="E clicar no botão &quot;Dowload All&quot; da &quot;Ativação em massa&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:21.601" endtime="20211113 17:57:21.621"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:57:21.628" level="INFO">Current page contains element 'css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn'.</msg>
+<status status="PASS" starttime="20211113 17:57:21.621" endtime="20211113 17:57:21.628"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:21.628" level="INFO">Clicking element 'css:button.MuiButtonBase-root.MuiIconButton-root.iconbtn'.</msg>
+<status status="PASS" starttime="20211113 17:57:21.628" endtime="20211113 17:57:21.713"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:21.601" endtime="20211113 17:57:21.713"/>
+</kw>
+<kw name="Então deverá realizar o download do arquivo Excel" library="ResourceContratos">
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${HOME_DIR}</var>
+<arg>~</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20211113 17:57:21.714" level="INFO">${HOME_DIR} = C:\Users\Flora-Qa</msg>
+<status status="PASS" starttime="20211113 17:57:21.714" endtime="20211113 17:57:21.714"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${DOWNLOAD_DIR}</var>
+<arg>${HOME_DIR}</arg>
+<arg>DownloadS</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20211113 17:57:21.715" level="INFO">${DOWNLOAD_DIR} = C:\Users\Flora-Qa\DownloadS</msg>
+<status status="PASS" starttime="20211113 17:57:21.714" endtime="20211113 17:57:21.715"/>
+</kw>
+<kw name="List Directory" library="OperatingSystem">
+<var>@{ITEMS}</var>
+<arg>${DOWNLOAD_DIR}</arg>
+<arg>Download.Excel</arg>
+<doc>Returns and logs items in a directory, optionally filtered with ``pattern``.</doc>
+<msg timestamp="20211113 17:57:21.715" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\Flora-Qa\DownloadS"&gt;C:\Users\Flora-Qa\DownloadS&lt;/a&gt;'.</msg>
+<msg timestamp="20211113 17:57:21.716" level="INFO">0 items:
+</msg>
+<msg timestamp="20211113 17:57:21.716" level="INFO">@{ITEMS} = [ ]</msg>
+<status status="PASS" starttime="20211113 17:57:21.715" endtime="20211113 17:57:21.716"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:57:21.716" endtime="20211113 17:57:21.718"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:57:21.718" endtime="20211113 17:57:21.720"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SPACE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211113 17:57:21.720" endtime="20211113 17:57:21.720"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:21.714" endtime="20211113 17:57:21.720"/>
+</kw>
+<kw name="Fechar navegador" library="ResourceContratos" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211113 17:57:21.721" endtime="20211113 17:57:23.891"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:21.721" endtime="20211113 17:57:23.891"/>
+</kw>
+<tag>AreaAdm_SetUpCPFL_Caso3</tag>
+<status status="PASS" starttime="20211113 17:57:03.023" endtime="20211113 17:57:23.892"/>
+</test>
+<test id="s1-t10" name="AREA ADM | SET UP CPFL PAULISTA | Caso de teste 04: Logar na área do adm, entrar em &quot;Set Up CPFL Paulista&quot;. pesquisar contrato na &quot;ativação em massa&quot; e verificar ativação.">
+<kw name="Abrir navegador" library="ResourceContratos" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211113 17:57:23.895" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
+<status status="PASS" starttime="20211113 17:57:23.895" endtime="20211113 17:57:28.597"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211113 17:57:28.597" endtime="20211113 17:57:28.746"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:23.894" endtime="20211113 17:57:28.746"/>
+</kw>
+<kw name="Dado que estou na pagina home" library="ResourceContratos">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211113 17:57:28.747" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
+<status status="PASS" starttime="20211113 17:57:28.747" endtime="20211113 17:57:30.184"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${VALIDAR_PAGINA}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211113 17:57:30.190" level="INFO">Page title is 'Flora Energia'.</msg>
+<status status="PASS" starttime="20211113 17:57:30.184" endtime="20211113 17:57:30.190"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:28.747" endtime="20211113 17:57:30.190"/>
+</kw>
+<kw name="E clicar no botão &quot;Entrar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:30.191" endtime="20211113 17:57:30.218"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:30.218" level="INFO">Clicking element 'css:a#login_lp'.</msg>
+<status status="PASS" starttime="20211113 17:57:30.218" endtime="20211113 17:57:31.294"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:30.190" endtime="20211113 17:57:31.294"/>
+</kw>
+<kw name="E preencher com usuario administrativo &quot;eder.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceContratos" sourcename="E preencher com usuario administrativo &quot;${EMAIL_ADM}&quot; no campo e-mail">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:31.295" endtime="20211113 17:57:31.319"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<arg>${EMAIL_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:31.320" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
+<status status="PASS" starttime="20211113 17:57:31.320" endtime="20211113 17:57:31.481"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:31.295" endtime="20211113 17:57:31.481"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:31.481" endtime="20211113 17:57:31.502"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:31.503" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:57:31.502" endtime="20211113 17:57:31.567"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:31.481" endtime="20211113 17:57:31.568"/>
+</kw>
+<kw name="E deverá inserir corretamente a senha administrativa &quot;Eder@29282726&quot;" library="ResourceContratos" sourcename="E deverá inserir corretamente a senha administrativa &quot;${SENHA_ADM}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:31.570" endtime="20211113 17:57:33.333"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>${SENHA_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:33.334" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
+<status status="PASS" starttime="20211113 17:57:33.333" endtime="20211113 17:57:33.419"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:31.569" endtime="20211113 17:57:33.419"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot; para logar na aplicação" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:33.420" endtime="20211113 17:57:33.434"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:33.434" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:57:33.434" endtime="20211113 17:57:33.484"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:33.419" endtime="20211113 17:57:33.484"/>
+</kw>
+<kw name="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;Contratos&quot;" library="ResourceContratos" sourcename="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;${CONTRATOS_HOME}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:33.486" endtime="20211113 17:57:36.742"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${CONTRATOS_HOME}</arg>
+<arg>Contratos</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20211113 17:57:36.742" endtime="20211113 17:57:36.742"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:33.485" endtime="20211113 17:57:36.742"/>
+</kw>
+<kw name="E clicar na opção &quot;Set Up Paulista&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:36.743" endtime="20211113 17:57:36.764"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:57:36.771" level="INFO">Current page contains element 'css:a.nav-item[href="/set-up-cpfl"]'.</msg>
+<status status="PASS" starttime="20211113 17:57:36.765" endtime="20211113 17:57:36.771"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:36.772" level="INFO">Clicking element 'css:a.nav-item[href="/set-up-cpfl"]'.</msg>
+<status status="PASS" starttime="20211113 17:57:36.771" endtime="20211113 17:57:36.859"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:36.743" endtime="20211113 17:57:36.860"/>
+</kw>
+<kw name="E apresentar a home de &quot;Set Up Paulista&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:36.861" endtime="20211113 17:57:41.273"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:36.860" endtime="20211113 17:57:41.273"/>
+</kw>
+<kw name="E clicar no botão &quot;Baixar Modelo&quot; da Set Up CPFL" library="ResourceContratos">
+<kw name="Quando clicar no botão &quot;Baixar Modelo&quot; da Set Up CPFL" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.sc-fXazdy.dRymUt</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:41.274" endtime="20211113 17:57:41.296"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:button.sc-fXazdy.dRymUt</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:57:41.326" level="INFO">Current page contains element 'css:button.sc-fXazdy.dRymUt'.</msg>
+<status status="PASS" starttime="20211113 17:57:41.296" endtime="20211113 17:57:41.326"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.sc-fXazdy.dRymUt</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:41.326" level="INFO">Clicking element 'css:button.sc-fXazdy.dRymUt'.</msg>
+<status status="PASS" starttime="20211113 17:57:41.326" endtime="20211113 17:57:41.690"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:41.274" endtime="20211113 17:57:41.690"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:41.273" endtime="20211113 17:57:41.690"/>
+</kw>
+<kw name="E apresentar a home de &quot;Ativação em massa&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:41.692" endtime="20211113 17:57:44.212"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:57:44.219" level="INFO">Current page contains element 'css:h1.sc-jffHpj.lLwQZ'.</msg>
+<status status="PASS" starttime="20211113 17:57:44.212" endtime="20211113 17:57:44.219"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:41.691" endtime="20211113 17:57:44.219"/>
+</kw>
+<kw name="E descrever no campo SEARCH &quot;Aguardando Ativação&quot;" library="ResourceContratos" sourcename="E descrever no campo SEARCH &quot;${N_CONTRATO}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:div.sc-eCbnUT.fElMzr</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:44.220" endtime="20211113 17:57:44.238"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:div.sc-eCbnUT.fElMzr</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:44.239" level="INFO">Clicking element 'css:div.sc-eCbnUT.fElMzr'.</msg>
+<status status="PASS" starttime="20211113 17:57:44.238" endtime="20211113 17:57:44.283"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input.sc-iBzEeX.glZmJR</arg>
+<arg>${N_CONTRATO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:44.284" level="INFO">Typing text 'Aguardando Ativação' into text field 'css:input.sc-iBzEeX.glZmJR'.</msg>
+<status status="PASS" starttime="20211113 17:57:44.283" endtime="20211113 17:57:44.368"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:44.220" endtime="20211113 17:57:44.368"/>
+</kw>
+<kw name="Quando clicar no botão &quot;Search&quot; Ativação em massa" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[1]/div/div/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:44.369" endtime="20211113 17:57:44.390"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[1]/div/div/button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:57:44.398" level="INFO">Current page contains element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20211113 17:57:44.390" endtime="20211113 17:57:44.398"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[1]/div/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:44.398" level="INFO">Clicking element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20211113 17:57:44.398" endtime="20211113 17:57:44.455"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211113 17:57:52.470" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20211113 17:57:44.455" endtime="20211113 17:57:52.470"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:44.369" endtime="20211113 17:57:52.470"/>
+</kw>
+<kw name="Então deverá realizar apresentar contratos para ativação &quot;aguardando ativação&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[3]/table/tbody/tr[1]/td[3]/p</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:52.472" endtime="20211113 17:57:52.496"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[3]/table/tbody/tr[1]/td[3]/p</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:57:52.508" level="INFO">Current page contains element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[3]/table/tbody/tr[1]/td[3]/p'.</msg>
+<status status="PASS" starttime="20211113 17:57:52.496" endtime="20211113 17:57:52.509"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211113 17:57:52.637" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-70.png"&gt;&lt;img src="selenium-screenshot-70.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211113 17:57:52.509" endtime="20211113 17:57:52.637"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:52.471" endtime="20211113 17:57:52.637"/>
+</kw>
+<kw name="Fechar navegador" library="ResourceContratos" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211113 17:57:52.639" endtime="20211113 17:57:54.802"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:52.638" endtime="20211113 17:57:54.802"/>
+</kw>
+<tag>AreaAdm_SetUpCPFL_Caso4</tag>
+<status status="PASS" starttime="20211113 17:57:23.893" endtime="20211113 17:57:54.803"/>
+</test>
+<test id="s1-t11" name="AREA ADM | SET UP CPFL PAULISTA | Caso de teste 05: Logar na área do adm, entrar em &quot;Set Up CPFL Paulista&quot;. pesquisar contrato, verificar ativação e ativar contrato">
+<kw name="Abrir navegador" library="ResourceContratos" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211113 17:57:54.805" level="INFO">Opening browser 'chrome' to base url 'https://staging.floraenergia.com.br/'.</msg>
+<status status="PASS" starttime="20211113 17:57:54.805" endtime="20211113 17:57:58.191"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211113 17:57:58.192" endtime="20211113 17:57:58.322"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:54.805" endtime="20211113 17:57:58.322"/>
+</kw>
+<kw name="Dado que estou na pagina home" library="ResourceContratos">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211113 17:57:58.326" level="INFO">Opening url 'https://staging.floraenergia.com.br/'</msg>
+<status status="PASS" starttime="20211113 17:57:58.326" endtime="20211113 17:57:59.917"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${VALIDAR_PAGINA}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211113 17:57:59.922" level="INFO">Page title is 'Flora Energia'.</msg>
+<status status="PASS" starttime="20211113 17:57:59.917" endtime="20211113 17:57:59.922"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:58.323" endtime="20211113 17:57:59.922"/>
+</kw>
+<kw name="E clicar no botão &quot;Entrar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:57:59.923" endtime="20211113 17:57:59.949"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a#login_lp</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:57:59.949" level="INFO">Clicking element 'css:a#login_lp'.</msg>
+<status status="PASS" starttime="20211113 17:57:59.949" endtime="20211113 17:58:01.147"/>
+</kw>
+<status status="PASS" starttime="20211113 17:57:59.923" endtime="20211113 17:58:01.148"/>
+</kw>
+<kw name="E preencher com usuario administrativo &quot;eder.estevan@floraenergia.com.br&quot; no campo e-mail" library="ResourceContratos" sourcename="E preencher com usuario administrativo &quot;${EMAIL_ADM}&quot; no campo e-mail">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:01.149" endtime="20211113 17:58:01.176"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input</arg>
+<arg>${EMAIL_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:58:01.176" level="INFO">Typing text 'eder.estevan@floraenergia.com.br' into text field 'css:input#standard-password-input'.</msg>
+<status status="PASS" starttime="20211113 17:58:01.176" endtime="20211113 17:58:01.331"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:01.148" endtime="20211113 17:58:01.331"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:01.332" endtime="20211113 17:58:01.357"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:58:01.357" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:58:01.357" endtime="20211113 17:58:01.415"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:01.331" endtime="20211113 17:58:01.415"/>
+</kw>
+<kw name="E deverá inserir corretamente a senha administrativa &quot;Eder@29282726&quot;" library="ResourceContratos" sourcename="E deverá inserir corretamente a senha administrativa &quot;${SENHA_ADM}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:01.417" endtime="20211113 17:58:02.789"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input#standard-password-input[name=password]</arg>
+<arg>${SENHA_ADM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:58:02.790" level="INFO">Typing text 'Eder@29282726' into text field 'css:input#standard-password-input[name=password]'.</msg>
+<status status="PASS" starttime="20211113 17:58:02.790" endtime="20211113 17:58:02.875"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:01.416" endtime="20211113 17:58:02.875"/>
+</kw>
+<kw name="E clicar no botão &quot;Avançar&quot; para logar na aplicação" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:02.876" endtime="20211113 17:58:02.894"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.read_more_btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:58:02.895" level="INFO">Clicking element 'css:button.read_more_btn'.</msg>
+<status status="PASS" starttime="20211113 17:58:02.895" endtime="20211113 17:58:02.935"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:02.876" endtime="20211113 17:58:02.935"/>
+</kw>
+<kw name="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;Contratos&quot;" library="ResourceContratos" sourcename="E o login deverá ser realizado com sucesso apresentando a área administrativa home &quot;${CONTRATOS_HOME}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:02.937" endtime="20211113 17:58:06.558"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${CONTRATOS_HOME}</arg>
+<arg>Contratos</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20211113 17:58:06.558" endtime="20211113 17:58:06.559"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:02.936" endtime="20211113 17:58:06.559"/>
+</kw>
+<kw name="E clicar na opção &quot;Set Up Paulista&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:06.560" endtime="20211113 17:58:06.580"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:58:06.586" level="INFO">Current page contains element 'css:a.nav-item[href="/set-up-cpfl"]'.</msg>
+<status status="PASS" starttime="20211113 17:58:06.580" endtime="20211113 17:58:06.586"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a.nav-item[href="/set-up-cpfl"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:58:06.586" level="INFO">Clicking element 'css:a.nav-item[href="/set-up-cpfl"]'.</msg>
+<status status="PASS" starttime="20211113 17:58:06.586" endtime="20211113 17:58:06.677"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:06.560" endtime="20211113 17:58:06.677"/>
+</kw>
+<kw name="E apresentar a home de &quot;Set Up Paulista&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:06.679" endtime="20211113 17:58:11.412"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:06.679" endtime="20211113 17:58:11.412"/>
+</kw>
+<kw name="E clicar no botão &quot;Baixar Modelo&quot; da Set Up CPFL" library="ResourceContratos">
+<kw name="Quando clicar no botão &quot;Baixar Modelo&quot; da Set Up CPFL" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.sc-fXazdy.dRymUt</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:11.413" endtime="20211113 17:58:11.435"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:button.sc-fXazdy.dRymUt</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:58:11.452" level="INFO">Current page contains element 'css:button.sc-fXazdy.dRymUt'.</msg>
+<status status="PASS" starttime="20211113 17:58:11.435" endtime="20211113 17:58:11.452"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.sc-fXazdy.dRymUt</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:58:11.452" level="INFO">Clicking element 'css:button.sc-fXazdy.dRymUt'.</msg>
+<status status="PASS" starttime="20211113 17:58:11.452" endtime="20211113 17:58:11.757"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:11.413" endtime="20211113 17:58:11.757"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:11.413" endtime="20211113 17:58:11.757"/>
+</kw>
+<kw name="E apresentar a home de &quot;Ativação em massa&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:11.758" endtime="20211113 17:58:14.389"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:58:14.395" level="INFO">Current page contains element 'css:h1.sc-jffHpj.lLwQZ'.</msg>
+<status status="PASS" starttime="20211113 17:58:14.390" endtime="20211113 17:58:14.395"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:11.758" endtime="20211113 17:58:14.395"/>
+</kw>
+<kw name="E descrever no campo SEARCH &quot;Aguardando Ativação&quot;" library="ResourceContratos" sourcename="E descrever no campo SEARCH &quot;${N_CONTRATO}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:div.sc-eCbnUT.fElMzr</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:14.396" endtime="20211113 17:58:14.412"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:div.sc-eCbnUT.fElMzr</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:58:14.412" level="INFO">Clicking element 'css:div.sc-eCbnUT.fElMzr'.</msg>
+<status status="PASS" starttime="20211113 17:58:14.412" endtime="20211113 17:58:14.477"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input.sc-iBzEeX.glZmJR</arg>
+<arg>${N_CONTRATO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211113 17:58:14.477" level="INFO">Typing text 'Aguardando Ativação' into text field 'css:input.sc-iBzEeX.glZmJR'.</msg>
+<status status="PASS" starttime="20211113 17:58:14.477" endtime="20211113 17:58:14.622"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:14.395" endtime="20211113 17:58:14.623"/>
+</kw>
+<kw name="E clicar no botão &quot;Search&quot; Ativação em massa" library="ResourceContratos">
+<kw name="Quando clicar no botão &quot;Search&quot; Ativação em massa" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[1]/div/div/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:14.624" endtime="20211113 17:58:14.647"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[1]/div/div/button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:58:14.657" level="INFO">Current page contains element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20211113 17:58:14.647" endtime="20211113 17:58:14.657"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[1]/div/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:58:14.657" level="INFO">Clicking element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20211113 17:58:14.657" endtime="20211113 17:58:14.725"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211113 17:58:22.739" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20211113 17:58:14.725" endtime="20211113 17:58:22.739"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:14.623" endtime="20211113 17:58:22.739"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:14.623" endtime="20211113 17:58:22.739"/>
+</kw>
+<kw name="E apresentar contratos para ativação &quot;aguardando ativação&quot;" library="ResourceContratos">
+<kw name="Então deverá realizar apresentar contratos para ativação &quot;aguardando ativação&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[3]/table/tbody/tr[1]/td[3]/p</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:22.740" endtime="20211113 17:58:22.767"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[3]/table/tbody/tr[1]/td[3]/p</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:58:22.777" level="INFO">Current page contains element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[4]/div/div/div/div/div/div[3]/table/tbody/tr[1]/td[3]/p'.</msg>
+<status status="PASS" starttime="20211113 17:58:22.767" endtime="20211113 17:58:22.777"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211113 17:58:22.937" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-71.png"&gt;&lt;img src="selenium-screenshot-71.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211113 17:58:22.777" endtime="20211113 17:58:22.937"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:22.740" endtime="20211113 17:58:22.937"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:22.740" endtime="20211113 17:58:22.937"/>
+</kw>
+<kw name="E clicar no primeiro contrato da lista" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:a.sc-jNnpgg.jclDow[href="/contratos/3023"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:22.939" endtime="20211113 17:58:22.960"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:a.sc-jNnpgg.jclDow[href="/contratos/3023"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:58:22.967" level="INFO">Current page contains element 'css:a.sc-jNnpgg.jclDow[href="/contratos/3023"]'.</msg>
+<status status="PASS" starttime="20211113 17:58:22.960" endtime="20211113 17:58:22.967"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a.sc-jNnpgg.jclDow[href="/contratos/3023"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:58:22.967" level="INFO">Clicking element 'css:a.sc-jNnpgg.jclDow[href="/contratos/3023"]'.</msg>
+<status status="PASS" starttime="20211113 17:58:22.967" endtime="20211113 17:58:23.107"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:22.938" endtime="20211113 17:58:23.107"/>
+</kw>
+<kw name="E presemtar a tela de &quot;Detalhes de contrato&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:23.109" endtime="20211113 17:58:24.632"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:h1.sc-jffHpj.lLwQZ</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:58:24.637" level="INFO">Current page contains element 'css:h1.sc-jffHpj.lLwQZ'.</msg>
+<status status="PASS" starttime="20211113 17:58:24.632" endtime="20211113 17:58:24.637"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:23.108" endtime="20211113 17:58:24.638"/>
+</kw>
+<kw name="E clicar no btoão &quot;Ativar Contrato&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div/div[3]/div/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:24.640" endtime="20211113 17:58:24.663"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div/div[3]/div/button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:58:24.669" level="INFO">Current page contains element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20211113 17:58:24.663" endtime="20211113 17:58:24.669"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div/div[3]/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:58:24.670" level="INFO">Clicking element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20211113 17:58:24.669" endtime="20211113 17:58:24.717"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:24.639" endtime="20211113 17:58:24.717"/>
+</kw>
+<kw name="Quando apresentar tela de confirmação &quot;Deseja ativar o contrato para o cliente?&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div/div[7]/div/h1</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:24.718" endtime="20211113 17:58:24.741"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div/div[7]/div/h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:58:24.749" level="INFO">Current page contains element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div/div[7]/div/h1'.</msg>
+<status status="PASS" starttime="20211113 17:58:24.741" endtime="20211113 17:58:24.750"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211113 17:58:24.950" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-72.png"&gt;&lt;img src="selenium-screenshot-72.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211113 17:58:24.750" endtime="20211113 17:58:24.950"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:24.717" endtime="20211113 17:58:24.950"/>
+</kw>
+<kw name="E clicar no botão &quot;Ativar o contrato&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div/div[7]/div/div[2]/div[2]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:24.951" endtime="20211113 17:58:24.973"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div/div[7]/div/div[2]/div[2]/button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:58:24.983" level="INFO">Current page contains element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div/div[7]/div/div[2]/div[2]/button'.</msg>
+<status status="PASS" starttime="20211113 17:58:24.973" endtime="20211113 17:58:24.983"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div/div[7]/div/div[2]/div[2]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211113 17:58:24.983" level="INFO">Clicking element 'Xpath=//*[@id="root"]/div[1]/div[2]/div/div/div[3]/div[1]/div[2]/div/div[7]/div/div[2]/div[2]/button'.</msg>
+<status status="PASS" starttime="20211113 17:58:24.983" endtime="20211113 17:58:25.024"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211113 17:58:33.041" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20211113 17:58:25.025" endtime="20211113 17:58:33.041"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:24.951" endtime="20211113 17:58:33.042"/>
+</kw>
+<kw name="Então o status do contrato deverá mudar para &quot;Ativo&quot;" library="ResourceContratos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:span.sc-efHYUO.dwCzsg</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211113 17:58:33.053" endtime="20211113 17:58:33.078"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:span.sc-efHYUO.dwCzsg</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211113 17:58:33.085" level="INFO">Current page contains element 'css:span.sc-efHYUO.dwCzsg'.</msg>
+<status status="PASS" starttime="20211113 17:58:33.078" endtime="20211113 17:58:33.085"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211113 17:58:33.229" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-73.png"&gt;&lt;img src="selenium-screenshot-73.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211113 17:58:33.085" endtime="20211113 17:58:33.229"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:33.047" endtime="20211113 17:58:33.229"/>
+</kw>
+<kw name="Fechar navegador" library="ResourceContratos" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211113 17:58:33.230" endtime="20211113 17:58:35.423"/>
+</kw>
+<status status="PASS" starttime="20211113 17:58:33.229" endtime="20211113 17:58:35.423"/>
+</kw>
+<tag>AreaAdm_SetUpCPFL_Caso5</tag>
+<status status="PASS" starttime="20211113 17:57:54.804" endtime="20211113 17:58:35.424"/>
+</test>
+<status status="PASS" starttime="20211113 17:54:02.767" endtime="20211113 17:58:35.425"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="11" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">AreaAdm_RefinoPropostas_Caso2</stat>
+<stat pass="1" fail="0" skip="0">AreaAdm_ContaLuz_Caso1</stat>
+<stat pass="1" fail="0" skip="0">AreaAdm_ContaLuz_Caso2</stat>
+<stat pass="1" fail="0" skip="0">AreaAdm_Contratos_Caso1</stat>
+<stat pass="1" fail="0" skip="0">AreaAdm_Contratos_Caso2</stat>
+<stat pass="1" fail="0" skip="0">AreaAdm_RefinoPropostas_Caso1</stat>
+<stat pass="1" fail="0" skip="0">AreaAdm_RefinoPropostas_Caso2</stat>
+<stat pass="1" fail="0" skip="0">AreaAdm_SetUpCPFL_Caso1</stat>
+<stat pass="1" fail="0" skip="0">AreaAdm_SetUpCPFL_Caso2</stat>
+<stat pass="1" fail="0" skip="0">AreaAdm_SetUpCPFL_Caso3</stat>
+<stat pass="1" fail="0" skip="0">AreaAdm_SetUpCPFL_Caso4</stat>
+<stat pass="1" fail="0" skip="0">AreaAdm_SetUpCPFL_Caso5</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Areaadm">Areaadm</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Contratos">Areaadm.Contratos</stat>
+<stat pass="11" fail="0" skip="0" id="s1" name="Contratos">Contratos</stat>
 </suite>
 </statistics>
 <errors>
